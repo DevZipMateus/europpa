@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demonstração de Vitrine - Climatizadores Europpa</title>
+  
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Lato:wght@900&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset & Variáveis */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #e3e4e3;
+      --primary: #26414c;
+      --primary-dark: #1a2f37;
+      --accent: #50a900;
+      --white: #ffffff;
+      --header-h: 100px;
+      --font-title: 'Montserrat', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --transition: 0.3s ease;
+    }
+
+    html, body {
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg);
+      color: #1a2427;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Botões */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      border: 2px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      border-color: var(--accent);
+    }
+    .btn-primary:hover, .btn-primary:focus {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Header */
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: var(--primary);
+      z-index: 10;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+    }
+
+    #header .container {
+      max-width: 1536px;
+      padding: 0 40px;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .header-logo img {
+      height: 80px;
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-link {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: color var(--transition), background var(--transition);
+    }
+
+    .nav-link:hover, .nav-link:focus {
+      color: var(--white);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .header-cta {
+      margin-left: 12px;
+      padding: 10px 22px;
+      font-size: 14px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--header-h);
+      left: 0;
+      right: 0;
+      background: var(--primary-dark);
+      padding: 20px 24px 32px;
+      z-index: 999;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-nav-links { display: flex; flex-direction: column; gap: 4px; margin-bottom: 20px; }
+    .mobile-nav-link {
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+      padding: 12px 16px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 992px) {
+      .nav-links { display: none; }
+      .header-cta { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* Vitrine (Iframe) */
+    iframe.vitrine-frame {
+      position: absolute;
+      top: 100px;
+      bottom: 63px;
+      width: 100%;
+      height: calc(100vh - 163px);
+      border: none;
+    }
+
+    /* Badge Inferior */
+    #montesite-footer-badge {
+      position: fixed !important;
+      bottom: 0 !important;
+      height: 63px !important;
+      width: 100%;
+      z-index: 10 !important;
+      background: #f8f9fa; /* cor de exemplo, caso o iframe nao cubra */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    }
+
+    /* Ajuste mobile do iframe (user request) */
+    @media (max-width: 768px) {
+      iframe.vitrine-frame {
+        padding-bottom: 50px !important;
+        height: calc(100vh - 213px) !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="header-logo" aria-label="Europpa Climatizadores - Página inicial">
+        <img src="logo.png" alt="Europpa Climatizadores">
+      </a>
+
+      <nav class="header-nav" role="navigation" aria-label="Navegação principal">
+        <ul class="nav-links" role="list">
+          <li><a href="index.html#hero" class="nav-link">Início</a></li>
+          <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="index.html#produtos" class="nav-link">Produtos</a></li>
+          <li><a href="vitrine.html" class="nav-link" style="color:var(--white);background:rgba(255,255,255,0.1);">Vitrine</a></li>
+          <li><a href="index.html#galeria" class="nav-link">Showroom</a></li>
+          <li><a href="index.html#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="index.html#mercado" class="nav-link">Mercado</a></li>
+          <li><a href="index.html#depoimentos" class="nav-link">Depoimentos</a></li>
+          <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+          <li><a href="index.html#planos" class="nav-link">Planos</a></li>
+          <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+        </ul>
+        <a href="https://wa.me/554333212244" class="btn btn-primary header-cta" target="_blank" rel="noopener noreferrer">
+          Fale conosco
+        </a>
+
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu de navegação mobile">
+    <ul class="mobile-nav-links" role="list">
+      <li><a href="index.html#hero" class="mobile-nav-link">Início</a></li>
+      <li><a href="index.html#sobre" class="mobile-nav-link">Sobre</a></li>
+      <li><a href="index.html#produtos" class="mobile-nav-link">Produtos</a></li>
+      <li><a href="vitrine.html" class="mobile-nav-link" style="color:var(--white);background:rgba(255,255,255,0.1);">Vitrine</a></li>
+      <li><a href="index.html#galeria" class="mobile-nav-link">Showroom</a></li>
+      <li><a href="index.html#servicos" class="mobile-nav-link">Serviços</a></li>
+      <li><a href="index.html#mercado" class="mobile-nav-link">Mercado</a></li>
+      <li><a href="index.html#depoimentos" class="mobile-nav-link">Depoimentos</a></li>
+      <li><a href="index.html#faq" class="mobile-nav-link">FAQ</a></li>
+      <li><a href="index.html#planos" class="mobile-nav-link">Planos</a></li>
+      <li><a href="index.html#contato" class="mobile-nav-link">Contato</a></li>
+    </ul>
+  </div>
+
+  <iframe class="vitrine-frame" src="https://roferventilacao01.egestor.com.br/vitrine/" title="Vitrine Europpa"></iframe>
+
+  <div id="montesite-footer-badge" style="display:none;"></div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !isExpanded);
+      hamburger.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

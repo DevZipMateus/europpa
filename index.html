@@ -1,0 +1,4051 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Europpa Climatizadores</title>
+  <meta name="description" content="Europpa Climatizadores oferece soluções em climatização evaporativa para indústrias, comércios, agronegócio e residências em Ibiporã - PR. Instalação, manutenção e venda de equipamentos.">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="pt-BR">
+  <meta name="author" content="Europpa Climatizadores">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Europpa Climatizadores">
+  <meta property="og:description" content="Europpa Climatizadores oferece soluções em climatização evaporativa para indústrias, comércios, agronegócio e residências em Ibiporã - PR. Instalação, manutenção e venda de equipamentos.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Lato:wght@900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================
+       CSS RESET & VARIÁVEIS
+    ============================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #e3e4e3;
+      --primary: #26414c;
+      --primary-dark: #1a2f37;
+      --primary-light: #2d4e5c;
+      --accent: #50a900;
+      --accent-dark: #3d8200;
+      --white: #ffffff;
+      --text-dark: #1a2427;
+      --text-muted: #5a6e75;
+      --border: rgba(38, 65, 76, 0.12);
+      --shadow-sm: 0 2px 8px rgba(38, 65, 76, 0.08);
+      --shadow-md: 0 8px 24px rgba(38, 65, 76, 0.12);
+      --shadow-lg: 0 20px 48px rgba(38, 65, 76, 0.16);
+      --radius: 12px;
+      --radius-lg: 20px;
+      --header-h: 100px;
+      --font-title: 'Montserrat', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --transition: 0.3s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ============================================
+       SCROLL ANIMATIONS
+    ============================================ */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+    .fade-in-delay-4 { transition-delay: 0.4s; }
+
+    .slide-left {
+      opacity: 0;
+      transform: translateX(-48px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .slide-right {
+      opacity: 0;
+      transform: translateX(48px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .slide-left.visible,
+    .slide-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .zoom-in {
+      opacity: 0;
+      transform: scale(0.88);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .zoom-in.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    @keyframes floatY {
+      0%, 100% { transform: translateY(-50%); }
+      50% { transform: translateY(calc(-50% - 18px)); }
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(80,169,0,0.55); }
+      65% { box-shadow: 0 0 0 9px rgba(80,169,0,0); }
+    }
+
+    /* ============================================
+       LAYOUT UTILITÁRIOS
+    ============================================ */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-title);
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .section-title.light {
+      color: var(--white);
+    }
+
+    .section-subtitle {
+      margin-top: 16px;
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .section-subtitle.light {
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* ============================================
+       BOTÕES
+    ============================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      border: 2px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(80, 169, 0, 0.35);
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,0.6);
+    }
+
+    .btn-outline-white:hover,
+    .btn-outline-white:focus {
+      background: rgba(255,255,255,0.12);
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-primary {
+      background: transparent;
+      color: var(--primary);
+      border-color: rgba(38,65,76,0.4);
+    }
+
+    .btn-outline-primary:hover,
+    .btn-outline-primary:focus {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .btn:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    /* ============================================
+       HEADER
+    ============================================ */
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-h);
+      background: var(--primary);
+      z-index: 1000;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+      transition: background var(--transition);
+    }
+
+    #header .container {
+      max-width: 1536px;
+      padding: 0 40px;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .header-logo img {
+      height: 80px;
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    .header-logo-text {
+      display: none;
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-link {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: color var(--transition), background var(--transition);
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+      color: var(--white);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .header-cta {
+      margin-left: 12px;
+      padding: 10px 22px;
+      font-size: 14px;
+    }
+
+    /* Hambúrguer */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      transition: background var(--transition);
+    }
+
+    .hamburger:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all var(--transition);
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--header-h);
+      left: 0;
+      right: 0;
+      background: var(--primary-dark);
+      padding: 20px 24px 32px;
+      z-index: 999;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 20px;
+    }
+
+    .mobile-nav-link {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+      padding: 12px 16px;
+      border-radius: 8px;
+      transition: background var(--transition);
+    }
+
+    .mobile-nav-link:hover {
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+    }
+
+    /* ============================================
+       HERO
+    ============================================ */
+    #hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(135deg, rgba(26,47,55,0.78) 0%, rgba(17,30,35,0.82) 100%),
+        url('assets/instalacoes/34.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: calc(var(--header-h) + 8vh) 0 max(8vh, 140px);
+    }
+
+    /* Padrão geométrico de fundo */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(80,169,0,0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(80,169,0,0.08) 0%, transparent 40%),
+        radial-gradient(circle at 60% 80%, rgba(80,169,0,0.06) 0%, transparent 35%);
+      pointer-events: none;
+    }
+
+    /* Grade decorativa */
+    #hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      width: 100%;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(80,169,0,0.15);
+      border: 1px solid rgba(80,169,0,0.3);
+      border-radius: 100px;
+      padding: 6px 16px;
+      margin-bottom: 32px;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulseDot 2s ease-in-out infinite;
+    }
+
+    .hero-badge-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+
+    .hero-title {
+      font-family: var(--font-title);
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .hero-brand-name {
+      font-family: 'Lato', sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      display: block;
+    }
+
+    .hero-brand-sub {
+      font-family: 'Lato', sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.42em;
+      color: var(--accent);
+      display: block;
+      margin-top: 4px;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-title);
+      font-size: clamp(20px, 3vw, 32px);
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 24px;
+      line-height: 1.3;
+    }
+
+    .hero-text {
+      font-size: 17px;
+      color: rgba(255,255,255,0.7);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 44px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    /* Elemento decorativo da hero (direita) */
+    .hero-decoration {
+      position: absolute;
+      right: -60px;
+      top: 50%;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      border: 1px solid rgba(80,169,0,0.15);
+      z-index: 1;
+      animation: floatY 7s ease-in-out infinite;
+    }
+
+    .hero-decoration::before {
+      content: '';
+      position: absolute;
+      inset: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(80,169,0,0.1);
+    }
+
+    .hero-decoration::after {
+      content: '';
+      position: absolute;
+      inset: 80px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(80,169,0,0.08) 0%, transparent 70%);
+    }
+
+    /* Stats na hero */
+    .hero-stats {
+      position: absolute;
+      bottom: 56px;
+      left: 0;
+      right: 0;
+      z-index: 2;
+    }
+
+    .hero-stats-inner {
+      display: flex;
+      gap: 48px;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .hero-stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-stat-number {
+      font-family: var(--font-title);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+    }
+
+    /* ============================================
+       SOBRE
+    ============================================ */
+    #sobre {
+      background: var(--white);
+    }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .sobre-text .section-title {
+      text-align: left;
+      margin-bottom: 8px;
+    }
+
+    .sobre-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .sobre-history-title {
+      font-family: var(--font-title);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 28px 0 12px;
+    }
+
+    .sobre-history-text {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    .sobre-image-wrap {
+      position: relative;
+    }
+
+    .sobre-image-bg {
+      background:
+        linear-gradient(135deg, rgba(26,47,55,0.78) 0%, rgba(17,30,35,0.84) 100%),
+        url('EUROPPA%20CLIMATIZADORES_midias/038_portatil.png') center/cover no-repeat;
+      border-radius: var(--radius-lg);
+      padding: 60px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 400px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sobre-image-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 30% 70%, rgba(80,169,0,0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(80,169,0,0.1) 0%, transparent 40%);
+    }
+
+    .sobre-logo {
+      position: relative;
+      z-index: 1;
+      width: 220px;
+      filter: brightness(0) invert(1);
+    }
+
+    .sobre-accent-card {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--accent);
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .sobre-accent-number {
+      font-family: var(--font-title);
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .sobre-accent-label {
+      font-size: 13px;
+      color: rgba(255,255,255,0.85);
+      margin-top: 4px;
+    }
+
+    /* Cards MVV */
+    .mvv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 64px;
+    }
+
+    .mvv-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      border-left: 4px solid var(--accent);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .mvv-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .mvv-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(80,169,0,0.12);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .mvv-icon svg {
+      color: var(--accent);
+    }
+
+    .mvv-title {
+      font-family: var(--font-title);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .mvv-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ============================================
+       PRODUTOS
+    ============================================ */
+    #produtos {
+      position: relative;
+      background-color: var(--bg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    #produtos::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.72);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    #produtos > .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .produtos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      justify-items: stretch;
+    }
+
+    /* Último card sozinho na linha → centraliza */
+    .produtos-grid .produto-card:last-child:nth-child(3n) {
+      grid-column: 2;
+    }
+
+    .produto-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .produto-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .produto-img-wrap {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .produto-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 20px;
+      transition: transform 0.5s ease;
+    }
+
+.produto-card:hover .produto-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .produto-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: var(--primary);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+
+    .produto-body {
+      padding: 28px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .produto-title {
+      font-family: var(--font-title);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .produto-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 24px;
+    }
+
+    .produto-btn {
+      align-self: flex-start;
+      padding: 10px 20px;
+      font-size: 14px;
+      background: var(--primary);
+      color: var(--white);
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .produto-btn:hover,
+    .produto-btn:focus {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* Card grande (destaque - 1º produto) */
+    .produto-card.featured {
+      grid-column: span 2;
+      flex-direction: row;
+    }
+
+    .produto-card.featured .produto-img-wrap {
+      width: 50%;
+      height: auto;
+      min-height: 280px;
+      flex-shrink: 0;
+    }
+
+    .produto-card.featured .produto-img-wrap img {
+      height: 100%;
+    }
+
+    .produto-card.featured .produto-body {
+      padding: 40px 36px;
+    }
+
+    .produto-card.featured .produto-title {
+      font-size: 22px;
+    }
+
+    .produto-card.featured .produto-desc {
+      font-size: 15px;
+    }
+
+    /* ============================================
+       SERVIÇOS
+    ============================================ */
+    #servicos {
+      background:
+        linear-gradient(135deg, rgba(26,47,55,0.86) 0%, rgba(17,30,35,0.90) 100%),
+        url('assets/instalacoes/33.png') center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #servicos::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 10% 90%, rgba(80,169,0,0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 10%, rgba(80,169,0,0.1) 0%, transparent 35%);
+      pointer-events: none;
+    }
+
+    #servicos .section-label {
+      color: rgba(80,169,0,0.9);
+    }
+
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .servico-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      transition: background var(--transition), transform var(--transition), border-color var(--transition);
+    }
+
+    .servico-card:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(80,169,0,0.4);
+      transform: translateY(-6px);
+    }
+
+    .servico-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(80,169,0,0.15);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      transition: background var(--transition);
+    }
+
+    .servico-card:hover .servico-icon {
+      background: rgba(80,169,0,0.25);
+    }
+
+    .servico-title {
+      font-family: var(--font-title);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .servico-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.68);
+      line-height: 1.65;
+    }
+
+    /* ============================================
+       MERCADO
+    ============================================ */
+    #mercado {
+      background: var(--bg);
+    }
+
+    .mercado-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 1200px) {
+      .mercado-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .mercado-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 20px;
+      text-align: center;
+      transition: transform var(--transition), box-shadow var(--transition);
+      border: 1px solid var(--border);
+    }
+
+    .mercado-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(80,169,0,0.3);
+    }
+
+    .mercado-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(38,65,76,0.06);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+      transition: background var(--transition);
+    }
+
+    .mercado-card:hover .mercado-icon {
+      background: rgba(80,169,0,0.12);
+    }
+
+    .mercado-card:hover .mercado-icon svg {
+      color: var(--accent);
+    }
+
+    .mercado-label {
+      font-family: var(--font-title);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* ============================================
+       PLANOS
+    ============================================ */
+    #planos {
+      background:
+        linear-gradient(135deg, rgba(26,47,55,0.82) 0%, rgba(17,30,35,0.86) 100%),
+        url('assets/instalacoes/35.png') center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #planos::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 80% 50%, rgba(80,169,0,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(80,169,0,0.08) 0%, transparent 35%);
+      pointer-events: none;
+    }
+
+    #planos .section-label {
+      color: rgba(80,169,0,0.9);
+    }
+
+    .planos-intro {
+      font-size: 18px;
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 56px;
+      line-height: 1.7;
+    }
+
+    .plano-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(80,169,0,0.3);
+      border-radius: var(--radius-lg);
+      padding: 56px 48px;
+      max-width: 680px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .plano-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(80,169,0,0.2);
+      border: 1px solid rgba(80,169,0,0.4);
+      border-radius: 100px;
+      padding: 6px 18px;
+      margin-bottom: 24px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .plano-title {
+      font-family: var(--font-title);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 32px;
+    }
+
+    .plano-beneficios {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    .plano-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .plano-item-check {
+      width: 22px;
+      height: 22px;
+      background: rgba(80,169,0,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ============================================
+       CONTATO
+    ============================================ */
+    #contato {
+      background: var(--bg);
+    }
+
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contato-info-title {
+      font-family: var(--font-title);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 32px;
+    }
+
+    .contato-items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+
+    .contato-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .contato-item-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(38,65,76,0.08);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contato-item-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+
+    .contato-item-value {
+      font-size: 15px;
+      color: var(--text-dark);
+      line-height: 1.5;
+    }
+
+    .contato-sociais {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all var(--transition);
+      border: 2px solid;
+    }
+
+    .social-btn-insta {
+      color: #c13584;
+      border-color: rgba(193,53,132,0.3);
+      background: rgba(193,53,132,0.05);
+    }
+
+    .social-btn-insta:hover {
+      background: #c13584;
+      color: var(--white);
+      border-color: #c13584;
+    }
+
+    .social-btn-fb {
+      color: #1877f2;
+      border-color: rgba(24,119,242,0.3);
+      background: rgba(24,119,242,0.05);
+    }
+
+    .social-btn-fb:hover {
+      background: #1877f2;
+      color: var(--white);
+      border-color: #1877f2;
+    }
+
+    .contato-mapa {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+
+    .contato-mapa iframe {
+      display: block;
+    }
+
+    /* ============================================
+       FOOTER
+    ============================================ */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255,255,255,0.75);
+    }
+
+    .footer-top {
+      padding: 64px 0 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+    }
+
+    .footer-brand-logo {
+      height: 64px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      margin-bottom: 16px;
+    }
+
+    .footer-brand-slogan {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    .footer-col-title {
+      font-family: var(--font-title);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-link {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      transition: color var(--transition);
+    }
+
+    .footer-link:hover {
+      color: var(--accent);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .footer-contact-text {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+
+    .footer-bottom {
+      padding: 20px 0;
+    }
+
+    .footer-bottom-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .footer-cnpj {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ============================================
+       WHATSAPP FLUTUANTE
+    ============================================ */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+      transition: box-shadow var(--transition), transform var(--transition);
+      cursor: pointer;
+    }
+
+    .whatsapp-float:hover,
+    .whatsapp-float:focus {
+      box-shadow: 0 6px 24px rgba(37,211,102,0.5);
+      transform: scale(1.06);
+    }
+
+    .whatsapp-float:focus-visible {
+      outline: 3px solid #25D366;
+      outline-offset: 3px;
+    }
+
+    .whatsapp-tooltip {
+      position: absolute;
+      right: 68px;
+      bottom: 50%;
+      transform: translateY(50%);
+      background: var(--text-dark);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition);
+    }
+
+    .whatsapp-tooltip::after {
+      content: '';
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 5px solid transparent;
+      border-left-color: var(--text-dark);
+    }
+
+    .whatsapp-float:hover .whatsapp-tooltip {
+      opacity: 1;
+    }
+
+    /* ============================================
+       RESPONSIVIDADE
+    ============================================ */
+    @media (max-width: 1024px) {
+      .nav-links,
+      .header-cta {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .sobre-grid {
+        gap: 40px;
+      }
+
+      .mvv-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .mercado-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+
+      .produto-card.featured {
+        grid-column: span 1;
+        flex-direction: column;
+      }
+
+      .produto-card.featured .produto-img-wrap {
+        width: 100%;
+        height: 240px;
+      }
+
+      .produtos-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contato-grid {
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --header-h: 64px;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .section-header {
+        margin-bottom: 44px;
+      }
+
+      .hero-decoration {
+        display: none;
+      }
+
+      .hero-stats {
+        display: none;
+      }
+
+      .sobre-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .sobre-image-wrap {
+        order: -1;
+      }
+
+      .mvv-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .produtos-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .produto-card.featured {
+        grid-column: span 1;
+      }
+
+      .servicos-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .mercado-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contato-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-bottom-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-actions .btn {
+        justify-content: center;
+      }
+
+      .plano-card {
+        padding: 40px 28px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .mercado-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contato-sociais {
+        flex-direction: column;
+      }
+
+      .hero-badge-text {
+        font-size: 11px;
+      }
+
+      .plano-card {
+        padding: 32px 20px;
+      }
+
+      .section-title {
+        font-size: 26px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .container {
+        padding: 0 16px;
+      }
+      .section {
+        padding: 52px 0;
+      }
+      .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+      }
+    }
+
+    /* ============================================
+       GALERIA
+    ============================================ */
+    #galeria {
+      background: var(--white);
+    }
+
+    /* Showroom — grid featured (6 imagens lifestyle) */
+    .showroom-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 220px 220px 260px;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+
+    .showroom-item { position: relative; overflow: hidden; border-radius: var(--radius); cursor: pointer; background: var(--bg); }
+    .showroom-item:nth-child(1) { grid-column: 1; grid-row: 1 / 3; }
+    .showroom-item:nth-child(2) { grid-column: 2 / 4; grid-row: 1; }
+    .showroom-item:nth-child(3) { grid-column: 2 / 4; grid-row: 2; }
+    .showroom-item:nth-child(4) { grid-column: 1; grid-row: 3; }
+    .showroom-item:nth-child(5) { grid-column: 2; grid-row: 3; }
+    .showroom-item:nth-child(6) { grid-column: 3; grid-row: 3; }
+
+    .showroom-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .showroom-item:hover img { transform: scale(1.06); }
+
+    /* Instalações — sub-grid 4 colunas */
+    .instalacao-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .instalacao-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .instalacao-item { position: relative; overflow: hidden; border-radius: var(--radius); cursor: pointer; aspect-ratio: 4/3; background: var(--bg); }
+    .instalacao-item img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.82); transition: transform 0.5s ease, filter 0.3s ease; }
+    .instalacao-item:hover img { transform: scale(1.06); filter: brightness(1); }
+
+    /* Overlay compartilhado */
+    .showroom-overlay, .instalacao-overlay {
+      position: absolute; inset: 0;
+      background: rgba(26,47,55,0);
+      display: flex; align-items: center; justify-content: center;
+      transition: background var(--transition);
+    }
+    .showroom-item:hover .showroom-overlay,
+    .instalacao-item:hover .instalacao-overlay { background: rgba(26,47,55,0.42); }
+
+    .showroom-icon, .instalacao-icon {
+      color: var(--white); opacity: 0; transform: scale(0.6);
+      transition: opacity var(--transition), transform var(--transition);
+    }
+    .showroom-item:hover .showroom-icon,
+    .instalacao-item:hover .instalacao-icon { opacity: 1; transform: scale(1); }
+
+    /* ============================================
+       CATÁLOGO DE PRODUTOS — TABS + CARDS
+    ============================================ */
+    .linha-tabs {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .linha-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 40px;
+      border: 2px solid var(--border);
+      background: var(--white);
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .linha-tab:hover { border-color: var(--primary); color: var(--primary); }
+    .linha-tab.active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+    .linha-tab svg { flex-shrink: 0; }
+
+    .linha-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 24px;
+    }
+    .linha-grid[hidden] { display: none !important; }
+
+    .prod-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .prod-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(80,169,0,0.4); }
+    .prod-card-img { width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #f0f2f0; }
+    .prod-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .prod-card:hover .prod-card-img img { transform: scale(1.07); }
+    .prod-card-body { padding: 16px 20px 20px; flex: 1; display: flex; flex-direction: column; }
+    .prod-card-badge {
+      display: inline-block;
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--accent); margin-bottom: 6px;
+    }
+    .prod-card-badge.destaque { color: #e07b00; }
+    .prod-card-badge.industrial { color: var(--primary); }
+    .prod-card-nome {
+      font-family: var(--font-title);
+      font-size: 17px; font-weight: 800;
+      color: var(--primary); margin-bottom: 4px; line-height: 1.2;
+    }
+    .prod-card-subtitle {
+      font-size: 11px; color: var(--text-muted);
+      line-height: 1.4; flex: 1; padding-bottom: 12px;
+    }
+    .prod-card-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 600; color: var(--accent);
+      border: none; background: none; padding: 0;
+      cursor: pointer; font-family: var(--font-body);
+      transition: gap var(--transition); margin-top: 8px;
+    }
+    .prod-card-btn:hover { gap: 10px; }
+
+    /* Produto Modal */
+    #prod-modal {
+      display: none; position: fixed; inset: 0;
+      z-index: 2100;
+      background: rgba(15, 24, 29, 0.88);
+      align-items: center; justify-content: center;
+      padding: 16px; overflow-y: auto;
+      backdrop-filter: blur(4px);
+    }
+    #prod-modal.open { display: flex; }
+    .prod-modal-inner {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      max-width: 1000px; width: 100%;
+      display: grid; grid-template-columns: 1.1fr 1fr;
+      overflow: hidden; max-height: 90vh;
+      position: relative;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.4);
+    }
+    .prod-modal-close {
+      position: absolute; top: 12px; right: 12px;
+      z-index: 10; width: 36px; height: 36px;
+      border-radius: 50%; background: var(--primary);
+      color: var(--white); border: none; font-size: 16px;
+      cursor: pointer; display: flex;
+      align-items: center; justify-content: center;
+      transition: background var(--transition);
+    }
+    .prod-modal-close:hover { background: var(--accent); }
+    .prod-modal-gallery {
+      background: #eef0ee; display: flex;
+      flex-direction: column; padding: 20px; gap: 12px;
+    }
+    .prod-gallery-main-wrap {
+      position: relative; flex: 1; min-height: 200px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #prod-modal-img {
+      max-height: 380px; max-width: 100%;
+      object-fit: contain; border-radius: 8px; display: block;
+    }
+    .prod-gallery-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(38,65,76,0.72); color: #fff;
+      border: none; border-radius: 50%;
+      width: 34px; height: 34px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: background var(--transition);
+    }
+    .prod-gallery-nav:hover { background: var(--accent); }
+    .prod-gallery-prev { left: 4px; }
+    .prod-gallery-next { right: 4px; }
+    .prod-gallery-counter { text-align: center; font-size: 12px; color: var(--text-muted); }
+    .prod-gallery-thumbs {
+      display: flex; gap: 8px;
+      overflow-x: auto; padding-bottom: 2px;
+      scrollbar-width: thin;
+    }
+    .prod-gallery-thumb {
+      flex-shrink: 0; width: 56px; height: 56px;
+      border-radius: 6px; overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer; background: #ddd;
+      transition: border-color var(--transition);
+    }
+    .prod-gallery-thumb.active { border-color: var(--accent); }
+    .prod-gallery-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .prod-modal-info {
+      padding: 28px 24px 24px; overflow-y: auto;
+      display: flex; flex-direction: column;
+    }
+    .prod-modal-badge-label {
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.14em;
+      color: var(--accent); margin-bottom: 8px; display: block;
+    }
+    .prod-modal-nome {
+      font-family: var(--font-title);
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 900; color: var(--primary);
+      line-height: 1.1; margin-bottom: 4px;
+    }
+    #prod-modal-subtitulo {
+      font-size: 12px; color: var(--text-muted);
+      margin-bottom: 16px; font-weight: 500;
+    }
+    #prod-modal-desc {
+      font-size: 14px; color: var(--text-dark);
+      line-height: 1.75; flex: 1; margin-bottom: 24px;
+    }
+    .prod-modal-actions { display: flex; flex-direction: column; gap: 10px; }
+    #prod-modal-pdf.hidden { display: none; }
+    #prod-modal-pdf { justify-content: center; text-align: center; }
+
+    @media (max-width: 720px) {
+      .prod-modal-inner { grid-template-columns: 1fr; max-height: 96vh; }
+      #prod-modal-img { max-height: 220px; }
+      .prod-modal-info { padding: 20px; }
+      .prod-modal-gallery { padding: 16px; }
+      .linha-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    }
+    @media (max-width: 480px) {
+      .linha-grid { grid-template-columns: 1fr; }
+      .linha-tab { padding: 10px 18px; font-size: 13px; }
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.93);
+      z-index: 10000;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox-img {
+      max-width: 88vw;
+      max-height: 82vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+    }
+
+    .lightbox-img.rotate-r {
+      transform: rotate(90deg);
+      max-width: 82vh;
+      max-height: 88vw;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: var(--white);
+      cursor: pointer;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background var(--transition);
+    }
+
+    .lightbox-close:hover {
+      background: rgba(255,255,255,0.22);
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: var(--white);
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background var(--transition);
+    }
+
+    .lightbox-prev { left: 18px; }
+    .lightbox-next { right: 18px; }
+
+    .lightbox-prev:hover,
+    .lightbox-next:hover {
+      background: rgba(255,255,255,0.22);
+    }
+
+    .lightbox-counter {
+      position: absolute;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.55);
+      font-family: var(--font-body);
+      font-size: 13px;
+      background: rgba(0,0,0,0.3);
+      padding: 4px 14px;
+      border-radius: 100px;
+    }
+
+    @media (max-width: 1024px) {
+      .showroom-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .showroom-item:nth-child(1) { grid-column: 1 / 3; grid-row: auto; aspect-ratio: 16/9; }
+      .showroom-item:nth-child(2),
+      .showroom-item:nth-child(3),
+      .showroom-item:nth-child(4),
+      .showroom-item:nth-child(5),
+      .showroom-item:nth-child(6) { grid-column: span 1; grid-row: auto; aspect-ratio: 4/3; }
+    }
+
+    @media (max-width: 768px) {
+      .instalacao-grid { grid-template-columns: repeat(2, 1fr); }
+      .produto-foto-grid { grid-template-columns: repeat(2, 1fr); }
+      .lightbox-prev { left: 8px; }
+      .lightbox-next { right: 8px; }
+    }
+
+    @media (max-width: 480px) {
+      .showroom-grid { grid-template-columns: 1fr; }
+      .showroom-item:nth-child(1),
+      .showroom-item:nth-child(2),
+      .showroom-item:nth-child(3),
+      .showroom-item:nth-child(4),
+      .showroom-item:nth-child(5),
+      .showroom-item:nth-child(6) { grid-column: span 1; grid-row: auto; aspect-ratio: 4/3; }
+      .instalacao-grid { grid-template-columns: repeat(2, 1fr); }
+      .produto-foto-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ============================================
+       DIFERENCIAIS
+    ============================================ */
+    #diferenciais {
+      background: var(--primary);
+      position: relative;
+      overflow: hidden;
+    }
+    #diferenciais::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 15% 80%, rgba(80,169,0,0.15) 0%, transparent 40%),
+        radial-gradient(circle at 85% 20%, rgba(80,169,0,0.10) 0%, transparent 35%);
+      pointer-events: none;
+    }
+    #diferenciais .section-label { color: rgba(80,169,0,0.9); }
+    .diferenciais-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .diferencial-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 32px 26px;
+      transition: background var(--transition), transform var(--transition), border-color var(--transition);
+    }
+    .diferencial-card:hover {
+      background: rgba(255,255,255,0.10);
+      border-color: rgba(80,169,0,0.35);
+      transform: translateY(-4px);
+    }
+    .diferencial-icon {
+      width: 52px; height: 52px;
+      background: rgba(80,169,0,0.15);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+      transition: background var(--transition);
+    }
+    .diferencial-card:hover .diferencial-icon { background: rgba(80,169,0,0.25); }
+    .diferencial-title {
+      font-family: var(--font-title); font-size: 16px; font-weight: 700;
+      color: var(--white); margin-bottom: 10px;
+    }
+    .diferencial-text { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.65; }
+
+    /* ============================================
+       COMO FUNCIONA
+    ============================================ */
+    #como-funciona { background: var(--white); }
+    .como-funciona-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      position: relative;
+    }
+    .como-funciona-steps::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: calc(12.5% + 20px);
+      right: calc(12.5% + 20px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);
+      opacity: 0.18;
+      pointer-events: none;
+    }
+    #como-funciona .container { max-width: 1400px; }
+    .cf-step { text-align: center; position: relative; display: flex; flex-direction: column; height: 100%; }
+    .cf-step img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: contain;
+      background: var(--white);
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .cf-step-num {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      box-shadow: 0 8px 24px rgba(38,65,76,0.22);
+      position: relative; z-index: 1;
+    }
+    .cf-step-badge {
+      position: absolute; top: -6px; right: -6px;
+      width: 24px; height: 24px;
+      background: var(--accent); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-title); font-size: 11px; font-weight: 800; color: white;
+    }
+    .cf-step-title {
+      font-family: var(--font-title); font-size: 16px; font-weight: 700;
+      color: var(--primary); margin-bottom: 10px;
+    }
+    .cf-step-text { font-size: 14px; color: var(--text-muted); line-height: 1.65; flex-grow: 1; }
+    .cf-result-box {
+      margin-top: 56px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      border-radius: var(--radius-lg);
+      padding: 36px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 32px; flex-wrap: wrap;
+    }
+    .cf-result-text {
+      font-family: var(--font-title);
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-weight: 700; color: var(--white); max-width: 500px;
+    }
+    .cf-result-text span { color: var(--accent); }
+
+    .modelo-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      background: var(--bg);
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .modelo-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* ============================================
+       DEPOIMENTOS
+    ============================================ */
+    #depoimentos { background: var(--bg); }
+    .depoimentos-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    }
+    .depoimento-card {
+      background: var(--white); border-radius: var(--radius-lg);
+      padding: 32px 28px; border: 1px solid var(--border);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      display: flex; flex-direction: column;
+    }
+    .depoimento-card:hover {
+      transform: translateY(-6px); box-shadow: var(--shadow-lg);
+      border-color: rgba(80,169,0,0.25);
+    }
+    .depoimento-stars { display: flex; gap: 3px; margin-bottom: 16px; }
+    .depoimento-quote {
+      font-size: 40px; color: var(--accent); opacity: 0.25;
+      line-height: 1; margin-bottom: 4px; font-family: Georgia, serif; font-weight: 700;
+    }
+    .depoimento-text {
+      font-size: 15px; color: var(--text-muted); line-height: 1.75; flex: 1; margin-bottom: 24px;
+    }
+    .depoimento-autor {
+      display: flex; align-items: center; gap: 14px;
+      border-top: 1px solid var(--border); padding-top: 20px;
+    }
+    .depoimento-avatar {
+      width: 46px; height: 46px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-title); font-size: 15px; font-weight: 700;
+      color: var(--white); flex-shrink: 0;
+    }
+    .depoimento-nome {
+      font-family: var(--font-title); font-size: 15px; font-weight: 700;
+      color: var(--primary); margin-bottom: 2px;
+    }
+    .depoimento-cargo { font-size: 12px; color: var(--text-muted); }
+
+    /* ============================================
+       FAQ
+    ============================================ */
+    #faq { background: var(--white); }
+    .faq-list {
+      max-width: 800px; margin: 0 auto;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .faq-item {
+      background: var(--bg); border-radius: var(--radius);
+      border: 1px solid var(--border); overflow: hidden;
+      transition: box-shadow var(--transition), border-color var(--transition);
+    }
+    .faq-item.open { box-shadow: var(--shadow-md); border-color: rgba(80,169,0,0.35); }
+    .faq-question {
+      width: 100%; background: none; border: none;
+      padding: 22px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      cursor: pointer; text-align: left;
+      transition: background var(--transition);
+    }
+    .faq-question:hover { background: rgba(80,169,0,0.04); }
+    .faq-q-text {
+      font-family: var(--font-title); font-size: 16px; font-weight: 600;
+      color: var(--primary); line-height: 1.4;
+    }
+    .faq-chevron {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: rgba(38,65,76,0.08);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .faq-item.open .faq-chevron { background: var(--accent); transform: rotate(180deg); }
+    .faq-item.open .faq-chevron svg { stroke: white; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0,1,0,1); }
+    .faq-item.open .faq-answer { max-height: 500px; transition: max-height 0.5s ease; }
+    .faq-answer-inner {
+      padding: 0 24px 22px; font-size: 15px; color: var(--text-muted); line-height: 1.75;
+    }
+
+    @media (max-width: 1024px) {
+      .diferenciais-grid { grid-template-columns: repeat(2, 1fr); }
+      .como-funciona-steps { grid-template-columns: repeat(2, 1fr); }
+      .como-funciona-steps::before { display: none; }
+      .depoimentos-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .diferenciais-grid { grid-template-columns: 1fr; }
+      .como-funciona-steps { grid-template-columns: 1fr; }
+      .depoimentos-grid { grid-template-columns: 1fr; }
+      .cf-result-box { padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       HEADER
+  ============================================ -->
+  <header id="header" role="banner">
+    <div class="container header-inner">
+      <a href="#hero" class="header-logo" aria-label="Europpa Climatizadores - Página inicial">
+        <img src="logo.png" alt="Europpa Climatizadores">
+      </a>
+
+      <nav class="header-nav" role="navigation" aria-label="Navegação principal">
+        <ul class="nav-links" role="list">
+          <li><a href="#hero" class="nav-link">Início</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#produtos" class="nav-link">Produtos</a></li>
+          <li><a href="vitrine.html" class="nav-link">Vitrine</a></li>
+          <li><a href="#galeria" class="nav-link">Showroom</a></li>
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#mercado" class="nav-link">Mercado</a></li>
+          <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#planos" class="nav-link">Planos</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+        <a href="https://wa.me/554333212244" class="btn btn-primary header-cta" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Fale conosco
+        </a>
+
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Menu Mobile -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu de navegação mobile">
+    <ul class="mobile-nav-links" role="list">
+      <li><a href="#hero" class="mobile-nav-link">Início</a></li>
+      <li><a href="#sobre" class="mobile-nav-link">Sobre</a></li>
+      <li><a href="#produtos" class="mobile-nav-link">Produtos</a></li>
+      <li><a href="vitrine.html" class="mobile-nav-link">Vitrine</a></li>
+      <li><a href="#galeria" class="mobile-nav-link">Showroom</a></li>
+      <li><a href="#diferenciais" class="mobile-nav-link">Diferenciais</a></li>
+      <li><a href="#como-funciona" class="mobile-nav-link">Como funciona</a></li>
+      <li><a href="#servicos" class="mobile-nav-link">Serviços</a></li>
+      <li><a href="#mercado" class="mobile-nav-link">Mercado</a></li>
+      <li><a href="#depoimentos" class="mobile-nav-link">Depoimentos</a></li>
+      <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+      <li><a href="#planos" class="mobile-nav-link">Planos</a></li>
+      <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
+    </ul>
+    <a href="https://wa.me/554333212244" class="btn btn-primary" style="width:100%;justify-content:center;" target="_blank" rel="noopener noreferrer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Fale conosco no WhatsApp
+    </a>
+  </div>
+
+  <!-- ============================================
+       HERO
+  ============================================ -->
+  <section id="hero" role="main">
+    <div class="container">
+      <div class="hero-content fade-in">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span class="hero-badge-text">Climatização evaporativa</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="hero-brand-name">Europpa</span><br>
+          <span class="hero-brand-sub">Climatizadores</span>
+        </h1>
+
+        <h2 class="hero-subtitle">A qualidade está no ar.</h2>
+
+        <p class="hero-text">
+          Soluções de climatização evaporativa para indústrias, comércios, agronegócio e residências. Eficiência, economia e conforto em cada projeto.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/554333212244" class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Solicitar orçamento pelo WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Solicitar orçamento
+          </a>
+          <a href="#produtos" class="btn btn-outline-white" aria-label="Ir para seção de produtos">
+            Conheça nossos produtos
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-decoration" aria-hidden="true"></div>
+
+    <div class="hero-stats" aria-hidden="true">
+      <div class="hero-stats-inner">
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-target="80" data-suffix="%">0%</span>
+          <span class="hero-stat-label">Menos energia que A/C</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-target="15" data-suffix="+">0+</span>
+          <span class="hero-stat-label">Segmentos atendidos</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-target="500" data-suffix="+">0+</span>
+          <span class="hero-stat-label">Projetos instalados</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-target="15" data-suffix="+">0+</span>
+          <span class="hero-stat-label">Anos de mercado</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SOBRE
+  ============================================ -->
+  <section id="sobre" class="section" aria-labelledby="sobre-titulo">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-text slide-left">
+          <span class="sobre-label">Quem somos</span>
+          <h2 class="section-title" id="sobre-titulo">Sobre nós</h2>
+
+          <h3 class="sobre-history-title">Nossa história</h3>
+          <p class="sobre-history-text">
+            A Europpa Climatizadores nasceu com o propósito de transformar ambientes através do conforto térmico, oferecendo soluções eficientes, econômicas e sustentáveis para empresas, indústrias, comércios e residências.
+          </p>
+          <p class="sobre-history-text" style="margin-top:16px;">
+            Ao longo da nossa trajetória, construímos uma reputação baseada na confiança, na qualidade dos serviços prestados e no compromisso com cada cliente. Hoje, seguimos evoluindo para entregar projetos cada vez mais eficientes, unindo tecnologia, economia de energia e responsabilidade ambiental.
+          </p>
+        </div>
+
+        <div class="sobre-image-wrap slide-right">
+          <div class="sobre-image-bg">
+            <img src="logo.png" alt="Logo Europpa Climatizadores" class="sobre-logo">
+          </div>
+          <div class="sobre-accent-card">
+            <div class="sobre-accent-number">15+</div>
+            <div class="sobre-accent-label">Anos de mercado</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MVV Cards -->
+      <div class="mvv-grid">
+        <div class="mvv-card fade-in fade-in-delay-1">
+          <div class="mvv-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#50a900"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3 class="mvv-title">Missão</h3>
+          <p class="mvv-text">Levar conforto térmico com economia, eficiência e sustentabilidade.</p>
+        </div>
+        <div class="mvv-card fade-in fade-in-delay-2">
+          <div class="mvv-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#50a900"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 class="mvv-title">Visão</h3>
+          <p class="mvv-text">Ser a empresa mais confiável e lembrada do Brasil em climatização evaporativa.</p>
+        </div>
+        <div class="mvv-card fade-in fade-in-delay-3">
+          <div class="mvv-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#50a900"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="mvv-title">Valores</h3>
+          <p class="mvv-text">Excelência, Confiança, Sustentabilidade, Inovação, Comprometimento, Eficiência e Respeito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       VÍDEO INSTITUCIONAL
+  ============================================ -->
+  <section id="video" style="background: var(--primary); padding: 72px 0;" aria-labelledby="video-titulo">
+    <div class="container">
+      <div class="section-header fade-in" style="margin-bottom: 40px;">
+        <span class="section-label" style="color: rgba(80,169,0,0.9);">Conheça a Europpa</span>
+        <h2 class="section-title light" id="video-titulo">CLIMATIZADORES EUROPPA</h2>
+        <p class="section-subtitle light">Tudo o que você precisa em climatizadores, peças e serviços.</p>
+      </div>
+      <div class="fade-in" style="max-width: 800px; margin: 0 auto; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 32px 80px rgba(0,0,0,0.4); aspect-ratio: 16/9; position: relative;">
+        <iframe
+          src="https://www.youtube.com/embed/dK-Fl9G_vro?si=HuA4bng3wJ-4VzoN"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       DIFERENCIAIS
+  ============================================ -->
+  <section id="diferenciais" class="section" aria-labelledby="diferenciais-titulo">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Por que nos escolher</span>
+        <h2 class="section-title light" id="diferenciais-titulo">Nossos diferenciais</h2>
+        <p class="section-subtitle light">Mais de 15 anos transformando ambientes com tecnologia, eficiência e compromisso com cada cliente.</p>
+      </div>
+
+      <div class="diferenciais-grid">
+        <div class="diferencial-card fade-in fade-in-delay-1">
+          <div class="diferencial-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#50a900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3 class="diferencial-title">Economia de até 80% de energia</h3>
+          <p class="diferencial-text">Climatizadores evaporativos consomem até 80% menos energia elétrica que ar condicionados convencionais, reduzindo significativamente a conta de luz.</p>
+        </div>
+
+        <div class="diferencial-card fade-in fade-in-delay-2">
+          <div class="diferencial-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#50a900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="diferencial-title">Instalação técnica certificada</h3>
+          <p class="diferencial-text">Equipe especializada realiza dimensionamento técnico completo, garantindo que cada projeto seja instalado corretamente para o máximo desempenho.</p>
+        </div>
+
+        <div class="diferencial-card fade-in fade-in-delay-3">
+          <div class="diferencial-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#50a900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="diferencial-title">Peças originais garantidas</h3>
+          <p class="diferencial-text">Trabalhamos exclusivamente com componentes originais e homologados, assegurando qualidade, durabilidade e desempenho dos equipamentos.</p>
+        </div>
+
+        <div class="diferencial-card fade-in fade-in-delay-1">
+          <div class="diferencial-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#50a900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3 class="diferencial-title">Documentação para Vigilância Sanitária</h3>
+          <p class="diferencial-text">Emitimos toda a documentação técnica exigida pela Vigilância Sanitária, facilitando o cumprimento das normas regulatórias para o seu negócio.</p>
+        </div>
+
+        <div class="diferencial-card fade-in fade-in-delay-2">
+          <div class="diferencial-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#50a900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="diferencial-title">Manutenção programada</h3>
+          <p class="diferencial-text">Contratos de manutenção preventiva com visitas regulares, garantindo o pleno funcionamento dos equipamentos e prevenindo falhas antes que ocorram.</p>
+        </div>
+
+        <div class="diferencial-card fade-in fade-in-delay-3">
+          <div class="diferencial-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#50a900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 class="diferencial-title">Atendimento em todo o Brasil</h3>
+          <p class="diferencial-text">Com base em Ibiporã – PR, atendemos clientes em todo o Brasil. Nossa equipe está preparada para projetos industriais e comerciais de grande porte em qualquer região do país.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       COMO FUNCIONA
+  ============================================ -->
+  <section id="como-funciona" class="section" aria-labelledby="como-funciona-titulo">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Tecnologia evaporativa</span>
+        <h2 class="section-title" id="como-funciona-titulo">Como funciona</h2>
+        <p class="section-subtitle">A climatização evaporativa usa a evaporação da água para reduzir a temperatura do ar — simples, eficiente e sustentável.</p>
+      </div>
+
+      <div class="como-funciona-steps">
+        <div class="cf-step fade-in fade-in-delay-1">
+          <div class="cf-step-num">
+            <span class="cf-step-badge">1</span>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <img src="assets/como-funciona/explicacao-01.png" alt="Processo evaporativo: ar quente externo passa pelo painel evaporativo e se transforma em ar fresco" loading="lazy">
+          <h3 class="cf-step-title">Captação do ar quente</h3>
+          <p class="cf-step-text">O ventilador interno capta o ar quente externo e força sua passagem pelo painel evaporativo com distribuidor e reservatório de água.</p>
+        </div>
+
+        <div class="cf-step fade-in fade-in-delay-2">
+          <div class="cf-step-num">
+            <span class="cf-step-badge">2</span>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <img src="assets/como-funciona/explicacao-02.png" alt="Circulação de ar no ambiente em 3 etapas: entrada, circulação e saída do ar quente" loading="lazy">
+          <h3 class="cf-step-title">Circulação pelo ambiente</h3>
+          <p class="cf-step-text">O ar fresco circula pelo ambiente em 3 etapas: entra resfriado, circula por toda a área e expulsa o ar quente para o exterior.</p>
+        </div>
+
+        <div class="cf-step fade-in fade-in-delay-3">
+          <div class="cf-step-num">
+            <span class="cf-step-badge">3</span>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <img src="assets/como-funciona/explicacao-03.png" alt="Galpão industrial com 3 climatizadores de teto sobre trabalhadores em atividade" loading="lazy">
+          <h3 class="cf-step-title">Queda de até 12°C</h3>
+          <p class="cf-step-text">A temperatura do ar pode cair até 12°C. Quanto mais seco o clima, maior a queda térmica — proporcionando conforto real em ambientes industriais, comerciais e residenciais em todo o Brasil.</p>
+        </div>
+
+        <div class="cf-step fade-in fade-in-delay-4">
+          <div class="cf-step-num">
+            <span class="cf-step-badge">4</span>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <img src="assets/como-funciona/explicacao-04.png" alt="Comparativo antes e depois: sem climatização 40°C interno versus com climatizadores 22°C interno" loading="lazy">
+          <h3 class="cf-step-title">Resultado comprovado</h3>
+          <p class="cf-step-text">Sem climatização: até 40°C interno. Com os climatizadores Europpa: 22°C de conforto. A diferença é visível e sentida por toda a equipe.</p>
+        </div>
+      </div>
+
+      <!-- Modelos de instalação e acabamentos -->
+      <div style="margin-top: 72px;" class="fade-in">
+        <div style="text-align: center; margin-bottom: 40px;">
+          <span class="section-label">Instalações e acabamentos</span>
+          <h3 class="section-title" style="font-size: clamp(22px, 3vw, 30px);">Modelos de instalação e acabamentos</h3>
+          <p class="section-subtitle" style="margin-top: 12px;">Veja como ficam as diferentes configurações de saída de ar e acabamentos internos.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; max-width: 900px; margin: 0 auto;">
+          <div class="modelo-item fade-in" onclick="openLightboxMD(0)" role="button" tabindex="0">
+            <img src="assets/como-funciona/como-funciona-1.png" alt="Modelo de instalação: saída para baixo com difusor 6 vias" loading="lazy" style="width:100%; display:block;">
+            <div style="padding: 14px 16px;">
+              <p style="font-family: var(--font-title); font-size: 13px; font-weight: 700; color: var(--primary);">Saída p/ baixo · Difusor 6 vias</p>
+            </div>
+          </div>
+          <div class="modelo-item fade-in fade-in-delay-1" onclick="openLightboxMD(1)" role="button" tabindex="0">
+            <img src="assets/como-funciona/como-funciona-2.png" alt="Modelo de instalação: saída para baixo com difusor 8 vias" loading="lazy" style="width:100%; display:block;">
+            <div style="padding: 14px 16px;">
+              <p style="font-family: var(--font-title); font-size: 13px; font-weight: 700; color: var(--primary);">Saída p/ baixo · Difusor 8 vias</p>
+            </div>
+          </div>
+          <div class="modelo-item fade-in fade-in-delay-2" onclick="openLightboxMD(2)" role="button" tabindex="0">
+            <img src="assets/como-funciona/como-funciona-3.png" alt="Modelo de instalação: saída para baixo com acabamento tweeter" loading="lazy" style="width:100%; display:block;">
+            <div style="padding: 14px 16px;">
+              <p style="font-family: var(--font-title); font-size: 13px; font-weight: 700; color: var(--primary);">Saída p/ baixo · Tweeter</p>
+            </div>
+          </div>
+          <div class="modelo-item fade-in fade-in-delay-3" onclick="openLightboxMD(3)" role="button" tabindex="0">
+            <img src="assets/como-funciona/como-funciona-4.png" alt="Modelo de instalação: saída para baixo na parede com grelha" loading="lazy" style="width:100%; display:block;">
+            <div style="padding: 14px 16px;">
+              <p style="font-family: var(--font-title); font-size: 13px; font-weight: 700; color: var(--primary);">Parede · Grelha</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cf-result-box fade-in">
+        <p class="cf-result-text">Resultado: até <span>12°C a menos</span> na temperatura e <span>80% menos</span> consumo de energia comparado ao ar condicionado convencional.</p>
+        <a href="https://wa.me/554333212244" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="flex-shrink:0;" aria-label="Solicitar orçamento pelo WhatsApp">
+          Quero um orçamento
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PRODUTOS
+  ============================================ -->
+  <section id="produtos" class="section" aria-labelledby="produtos-titulo">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Linha completa</span>
+        <h2 class="section-title" id="produtos-titulo">Nossos produtos</h2>
+        <p class="section-subtitle">Selecione a categoria e clique em um produto para ver fotos e ficha técnica.</p>
+      </div>
+      <div class="linha-tabs fade-in" role="tablist" aria-label="Categorias de produto">
+        <button class="linha-tab active" role="tab" aria-selected="true" data-tab="portateis" aria-controls="tab-portateis">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          Portáteis
+        </button>
+        <button class="linha-tab" role="tab" aria-selected="false" data-tab="industriais" aria-controls="tab-industriais">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Industriais
+        </button>
+        <button class="linha-tab" role="tab" aria-selected="false" data-tab="acabamento" aria-controls="tab-acabamento">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          Acabamento Interno
+        </button>
+      </div>
+      <div id="tab-portateis" class="linha-grid" role="tabpanel"></div>
+      <div id="tab-industriais" class="linha-grid" role="tabpanel" hidden></div>
+      <div id="tab-acabamento" class="linha-grid" role="tabpanel" hidden></div>
+      <div style="text-align:center; margin-top:56px;" class="fade-in">
+        <a href="vitrine.html" class="btn btn-primary" aria-label="Acessar vitrine completa">Acessar Vitrine Completa</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       GALERIA / SHOWROOM
+  ============================================ -->
+  <section id="galeria" class="section" aria-labelledby="galeria-titulo">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Nosso showroom</span>
+        <h2 class="section-title" id="galeria-titulo">Instalações industriais e comerciais</h2>
+        <p class="section-subtitle">Conforto térmico real em galpões, indústrias, comércios e espaços de grande porte em todo o Brasil.</p>
+      </div>
+
+      <!-- 6 fotos de instalações industriais em destaque -->
+      <div class="showroom-grid fade-in">
+        <div class="showroom-item zoom-in" onclick="openLightboxSR(0)" role="button" tabindex="0" aria-label="Ver instalação 1">
+          <img src="assets/instalacoes/27.png" alt="Instalação industrial Europpa — climatizadores em galpão" loading="lazy">
+          <div class="showroom-overlay"><svg class="showroom-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        </div>
+        <div class="showroom-item zoom-in fade-in-delay-1" onclick="openLightboxSR(1)" role="button" tabindex="0" aria-label="Ver instalação 2">
+          <img src="assets/instalacoes/28.png" alt="Climatizadores industriais instalados em ambiente comercial" loading="lazy">
+          <div class="showroom-overlay"><svg class="showroom-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        </div>
+        <div class="showroom-item zoom-in fade-in-delay-2" onclick="openLightboxSR(2)" role="button" tabindex="0" aria-label="Ver instalação 3">
+          <img src="assets/instalacoes/29.png" alt="Projeto Europpa — climatização de grande galpão industrial" loading="lazy">
+          <div class="showroom-overlay"><svg class="showroom-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        </div>
+        <div class="showroom-item zoom-in fade-in-delay-3" onclick="openLightboxSR(3)" role="button" tabindex="0" aria-label="Ver instalação 4">
+          <img src="assets/instalacoes/30.png" alt="Instalação Europpa — climatizadores de teto em galpão" loading="lazy">
+          <div class="showroom-overlay"><svg class="showroom-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        </div>
+        <div class="showroom-item zoom-in fade-in-delay-1" onclick="openLightboxSR(4)" role="button" tabindex="0" aria-label="Ver instalação 5">
+          <img src="assets/instalacoes/31.png" alt="Climatização industrial Europpa — projeto de grande porte" loading="lazy">
+          <div class="showroom-overlay"><svg class="showroom-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        </div>
+        <div class="showroom-item zoom-in fade-in-delay-2" onclick="openLightboxSR(5)" role="button" tabindex="0" aria-label="Ver instalação 6">
+          <img src="assets/instalacoes/32.png" alt="Europpa Climatizadores — instalação em espaço comercial" loading="lazy">
+          <div class="showroom-overlay"><svg class="showroom-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        </div>
+      </div>
+
+      <!-- 4 instalações adicionais -->
+      <span class="instalacao-label fade-in">Mais projetos realizados</span>
+      <div class="instalacao-grid fade-in">
+        <div class="instalacao-item zoom-in" onclick="openLightboxSR(6)" role="button" tabindex="0" aria-label="Ver instalação 7">
+          <img src="assets/instalacoes/33.png" alt="Instalação Europpa — galpão industrial climatizado" loading="lazy">
+          <div class="instalacao-overlay"><svg class="instalacao-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        </div>
+        <div class="instalacao-item zoom-in fade-in-delay-1" onclick="openLightboxSR(7)" role="button" tabindex="0" aria-label="Ver instalação 8">
+          <img src="assets/instalacoes/34.png" alt="Instalação Europpa — projeto industrial completo" loading="lazy">
+          <div class="instalacao-overlay"><svg class="instalacao-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        </div>
+        <div class="instalacao-item zoom-in fade-in-delay-2" onclick="openLightboxSR(8)" role="button" tabindex="0" aria-label="Ver instalação 9">
+          <img src="assets/instalacoes/35.png" alt="Instalação Europpa — climatização industrial" loading="lazy">
+          <div class="instalacao-overlay"><svg class="instalacao-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        </div>
+        <div class="instalacao-item zoom-in fade-in-delay-3" onclick="openLightboxSR(9)" role="button" tabindex="0" aria-label="Ver instalação 10">
+          <img src="assets/instalacoes/27.png" alt="Europpa Climatizadores — instalação industrial" loading="lazy">
+          <div class="instalacao-overlay"><svg class="instalacao-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Modal de produto -->
+  <div id="prod-modal" role="dialog" aria-modal="true" aria-label="Detalhes do produto">
+    <div class="prod-modal-inner">
+      <button class="prod-modal-close" id="prod-modal-close" aria-label="Fechar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="prod-modal-gallery">
+        <div class="prod-gallery-main-wrap">
+          <img id="prod-modal-img" src="" alt="" loading="lazy">
+          <button class="prod-gallery-nav prod-gallery-prev" id="prod-gallery-prev" aria-label="Foto anterior">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="prod-gallery-nav prod-gallery-next" id="prod-gallery-next" aria-label="Próxima foto">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+        <div class="prod-gallery-counter" id="prod-gallery-counter"></div>
+        <div class="prod-gallery-thumbs" id="prod-gallery-thumbs"></div>
+      </div>
+      <div class="prod-modal-info">
+        <span class="prod-modal-badge-label" id="prod-modal-badge"></span>
+        <h3 class="prod-modal-nome" id="prod-modal-nome"></h3>
+        <p id="prod-modal-subtitulo"></p>
+        <p id="prod-modal-desc"></p>
+        <div class="prod-modal-actions">
+          <a href="#" class="btn btn-outline-primary" id="prod-modal-pdf" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Baixar ficha técnica
+          </a>
+          <a href="https://wa.me/554333212244" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox (compartilhado) -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Galeria de imagens em tela cheia">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Fechar galeria">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Imagem anterior">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <img id="lightbox-img" class="lightbox-img" src="" alt="Projeto Europpa Climatizadores">
+    <button class="lightbox-next" id="lightbox-next" aria-label="Próxima imagem">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="lightbox-counter" id="lightbox-counter"></div>
+  </div>
+
+  <!-- ============================================
+       SERVIÇOS
+  ============================================ -->
+  <section id="servicos" class="section" aria-labelledby="servicos-titulo">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">O que fazemos</span>
+        <h2 class="section-title light" id="servicos-titulo">Nossos serviços</h2>
+        <p class="section-subtitle light">Atendimento especializado em todas as etapas, do planejamento ao suporte técnico.</p>
+      </div>
+
+      <div class="servicos-grid">
+        <div class="servico-card fade-in fade-in-delay-1" role="article">
+          <div class="servico-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#50a900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="servico-title">Instalação</h3>
+          <p class="servico-desc">Instalação profissional e dimensionamento técnico completo para seu projeto de climatização, garantindo o melhor resultado.</p>
+        </div>
+
+        <div class="servico-card fade-in fade-in-delay-2" role="article">
+          <div class="servico-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#50a900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="servico-title">Manutenção</h3>
+          <p class="servico-desc">Manutenção preventiva e corretiva para garantir o desempenho máximo dos equipamentos e prolongar sua vida útil.</p>
+        </div>
+
+        <div class="servico-card fade-in fade-in-delay-3" role="article">
+          <div class="servico-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#50a900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="servico-title">Venda de peças</h3>
+          <p class="servico-desc">Peças e componentes originais para reposição e manutenção dos climatizadores, com procedência garantida.</p>
+        </div>
+
+        <div class="servico-card fade-in fade-in-delay-4" role="article">
+          <div class="servico-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#50a900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3 class="servico-title">Documentação técnica</h3>
+          <p class="servico-desc">Emissão de documentação técnica exigida pela vigilância sanitária e órgãos reguladores, conforme normas vigentes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       MERCADO
+  ============================================ -->
+  <section id="mercado" class="section" aria-labelledby="mercado-titulo">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Nossa abrangência</span>
+        <h2 class="section-title" id="mercado-titulo">Segmentos que atendemos</h2>
+        <p class="section-subtitle">Soluções de climatização para os mais diversos ambientes e atividades.</p>
+      </div>
+
+      <div class="mercado-grid">
+        <div class="mercado-card fade-in fade-in-delay-1" role="article">
+          <div class="mercado-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <span class="mercado-label">Indústrias</span>
+        </div>
+
+        <div class="mercado-card fade-in fade-in-delay-1" role="article">
+          <div class="mercado-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <span class="mercado-label">Comércio</span>
+        </div>
+
+        <div class="mercado-card fade-in fade-in-delay-2" role="article">
+          <div class="mercado-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <span class="mercado-label">Agronegócio</span>
+        </div>
+
+        <div class="mercado-card fade-in fade-in-delay-2" role="article">
+          <div class="mercado-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <span class="mercado-label">Academias</span>
+        </div>
+
+        <div class="mercado-card fade-in fade-in-delay-3" role="article">
+          <div class="mercado-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+          </div>
+          <span class="mercado-label">Igrejas</span>
+        </div>
+
+        <div class="mercado-card fade-in fade-in-delay-1" role="article">
+          <div class="mercado-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <span class="mercado-label">Escolas</span>
+        </div>
+
+        <div class="mercado-card fade-in fade-in-delay-2" role="article">
+          <div class="mercado-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <span class="mercado-label">Centros logísticos</span>
+        </div>
+
+        <div class="mercado-card fade-in fade-in-delay-2" role="article">
+          <div class="mercado-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <span class="mercado-label">Oficinas</span>
+        </div>
+
+        <div class="mercado-card fade-in fade-in-delay-3" role="article">
+          <div class="mercado-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="mercado-label">Eventos</span>
+        </div>
+
+        <div class="mercado-card fade-in fade-in-delay-3" role="article">
+          <div class="mercado-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <span class="mercado-label">Residências</span>
+        </div>
+
+        <div class="mercado-card fade-in fade-in-delay-1" role="article">
+          <div class="mercado-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+          </div>
+          <span class="mercado-label">Restaurantes</span>
+        </div>
+
+        <div class="mercado-card fade-in fade-in-delay-2" role="article">
+          <div class="mercado-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </div>
+          <span class="mercado-label">Supermercados</span>
+        </div>
+
+        <div class="mercado-card fade-in fade-in-delay-3" role="article">
+          <div class="mercado-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          </div>
+          <span class="mercado-label">Conveniências</span>
+        </div>
+
+        <div class="mercado-card fade-in fade-in-delay-1" role="article">
+          <div class="mercado-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><rect x="9" y="14" width="6" height="7"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+          </div>
+          <span class="mercado-label">Farmácias</span>
+        </div>
+
+        <div class="mercado-card fade-in fade-in-delay-2" role="article">
+          <div class="mercado-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <span class="mercado-label">Hospitais</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       DEPOIMENTOS
+  ============================================ -->
+  <section id="depoimentos" class="section" aria-labelledby="depoimentos-titulo">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">O que dizem nossos clientes</span>
+        <h2 class="section-title" id="depoimentos-titulo">Depoimentos</h2>
+        <p class="section-subtitle">A satisfação de quem escolheu a Europpa é o nosso maior diferencial.</p>
+      </div>
+
+      <div class="depoimentos-grid">
+
+        <div class="depoimento-card fade-in fade-in-delay-1">
+          <div class="depoimento-stars">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="depoimento-quote">"</div>
+          <p class="depoimento-text">Instalamos climatizadores da Europpa no nosso galpão industrial e o resultado foi incrível. A temperatura caiu muito e nossa equipe ficou muito mais produtiva. O consumo de energia é bem menor do que o ar condicionado que tínhamos antes.</p>
+          <div class="depoimento-autor">
+            <div class="depoimento-avatar" style="background: linear-gradient(135deg, #26414c, #50a900);">JC</div>
+            <div>
+              <p class="depoimento-nome">João Carlos M.</p>
+              <p class="depoimento-cargo">Diretor Industrial — Indústria de Alimentos, Londrina - PR</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="depoimento-card fade-in fade-in-delay-2">
+          <div class="depoimento-stars">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="depoimento-quote">"</div>
+          <p class="depoimento-text">Minha academia ficou muito mais agradável para os alunos depois da instalação. O climatizador funciona muito bem, a instalação foi rápida e a equipe da Europpa foi super atenciosa do começo ao fim. Recomendo demais!</p>
+          <div class="depoimento-autor">
+            <div class="depoimento-avatar" style="background: linear-gradient(135deg, #50a900, #3d8200);">AP</div>
+            <div>
+              <p class="depoimento-nome">Ana Paula R.</p>
+              <p class="depoimento-cargo">Proprietária — Academia, Ibiporã - PR</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="depoimento-card fade-in fade-in-delay-3">
+          <div class="depoimento-stars">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="depoimento-quote">"</div>
+          <p class="depoimento-text">Temos contrato de manutenção com a Europpa para nossa rede de estabelecimentos. O suporte é excelente, os técnicos são pontuais e a documentação para a Vigilância Sanitária está sempre em dia. É uma parceria que não tem preço.</p>
+          <div class="depoimento-autor">
+            <div class="depoimento-avatar" style="background: linear-gradient(135deg, #1a2f37, #26414c);">MF</div>
+            <div>
+              <p class="depoimento-nome">Marcos Fernandes</p>
+              <p class="depoimento-cargo">Gerente — Rede de Supermercados, Norte do Paraná</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FAQ
+  ============================================ -->
+  <section id="faq" class="section" aria-labelledby="faq-titulo">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Dúvidas frequentes</span>
+        <h2 class="section-title" id="faq-titulo">Perguntas frequentes</h2>
+        <p class="section-subtitle">Entenda melhor como a climatização evaporativa funciona e como a Europpa pode ajudar você.</p>
+      </div>
+
+      <div class="faq-list fade-in">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text">O que é climatização evaporativa e como ela funciona?</span>
+            <span class="faq-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">A climatização evaporativa é um método de resfriamento que utiliza a evaporação da água para reduzir a temperatura do ar. O ar quente é forçado a passar por um painel saturado com água: nesse processo, a água evapora absorvendo o calor do ar, que pode sair até 12°C mais frio. É uma tecnologia natural, eficiente e sustentável.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text">Qual a diferença entre climatizador evaporativo e ar condicionado?</span>
+            <span class="faq-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">O ar condicionado usa gás refrigerante e compressor, sendo ideal para ambientes completamente fechados. O climatizador evaporativo usa apenas água e é até 80% mais econômico em energia. Funciona melhor em ambientes semi-abertos (galpões, coberturas, eventos), renova o ar continuamente e não recircula o mesmo ar poluído.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text">O climatizador evaporativo funciona em dias úmidos?</span>
+            <span class="faq-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">A eficiência é maior em dias secos, quando a queda de temperatura pode chegar a 12°C. Em dias mais úmidos, a redução térmica é menor, pois o ar já está parcialmente saturado com vapor d'água. Ainda assim, o equipamento continua renovando o ar e promovendo circulação constante — garantindo conforto térmico em qualquer região do Brasil, seja no cerrado, no litoral ou no sul do país.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text">Quanto de água o climatizador consome?</span>
+            <span class="faq-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">O consumo varia conforme o modelo e as condições climáticas, ficando em média entre 3 e 15 litros por hora. Modelos portáteis têm reservatório próprio, enquanto modelos fixos podem ser conectados à rede hidráulica com reposição automática. O consumo é surpreendentemente baixo considerando a área climatizada.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text">É necessária instalação elétrica especial?</span>
+            <span class="faq-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Os climatizadores portáteis funcionam em tomadas comuns de 110V ou 220V. Os modelos fixos de maior porte podem exigir um circuito dedicado. Nossa equipe técnica realiza avaliação elétrica durante o dimensionamento do projeto, garantindo que a instalação atenda às normas de segurança.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text">Com que frequência é necessária a manutenção?</span>
+            <span class="faq-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Recomendamos manutenção preventiva a cada 3 a 6 meses, dependendo da intensidade de uso. A manutenção inclui limpeza do painel evaporativo, verificação do sistema hidráulico, inspeção do motor e ventilador. Oferecemos contratos com preços diferenciados para redes e múltiplos equipamentos.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text">A Europpa atende fora de Ibiporã?</span>
+            <span class="faq-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sim! A Europpa Climatizadores atende em todo o Brasil. Com base em Ibiporã – PR, realizamos projetos de climatização industrial e comercial em qualquer estado do país. Temos representantes comerciais para Curitiba e região, e para Londrina e região. Entre em contato para verificar as condições de atendimento para a sua localidade.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PLANOS
+  ============================================ -->
+  <section id="planos" class="section" aria-labelledby="planos-titulo">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Contratos</span>
+        <h2 class="section-title light" id="planos-titulo">Contratos de manutenção</h2>
+      </div>
+
+      <p class="planos-intro fade-in">
+        Oferecemos contratos de manutenção personalizados para redes de estabelecimentos. Valores negociados conforme volume e frequência de atendimento.
+      </p>
+
+      <div class="plano-card zoom-in">
+        <div class="plano-card-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Para redes e frotas de equipamentos
+        </div>
+
+        <h3 class="plano-title">Plano personalizado para sua rede</h3>
+
+        <ul class="plano-beneficios" aria-label="Benefícios do plano de manutenção">
+          <li class="plano-item">
+            <span class="plano-item-check" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#50a900" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Visitas programadas e preventivas
+          </li>
+          <li class="plano-item">
+            <span class="plano-item-check" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#50a900" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Prioridade no atendimento
+          </li>
+          <li class="plano-item">
+            <span class="plano-item-check" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#50a900" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Suporte técnico especializado
+          </li>
+          <li class="plano-item">
+            <span class="plano-item-check" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#50a900" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Relatórios de manutenção
+          </li>
+          <li class="plano-item">
+            <span class="plano-item-check" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#50a900" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Preços diferenciados para redes
+          </li>
+        </ul>
+
+        <a href="https://wa.me/554333212244" class="btn btn-primary" style="font-size:16px;padding:16px 40px;" target="_blank" rel="noopener noreferrer" aria-label="Solicitar proposta de contrato de manutenção pelo WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Solicitar proposta
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA
+  ============================================ -->
+  <section style="background: var(--accent); padding: 72px 0;">
+    <div class="container">
+      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:32px;">
+        <div class="fade-in">
+          <p style="font-family:var(--font-body); font-size:13px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.75); margin-bottom:10px;">Pronto para começar?</p>
+          <h2 style="font-family:var(--font-title); font-size:clamp(24px,4vw,36px); font-weight:800; color:#fff; line-height:1.2; margin:0;">Solicite um orçamento sem compromisso.</h2>
+        </div>
+        <div class="fade-in fade-in-delay-1" style="display:flex; flex-wrap:wrap; gap:16px; flex-shrink:0;">
+          <a href="https://wa.me/554333212244" class="btn" target="_blank" rel="noopener noreferrer" style="background:#fff; color:var(--accent); border-color:#fff; font-size:15px;" aria-label="Solicitar orçamento pelo WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Falar no WhatsApp
+          </a>
+          <a href="#contato" class="btn" style="background:transparent; color:#fff; border-color:rgba(255,255,255,0.5);" aria-label="Ir para seção de contato">
+            Ver formas de contato
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VITRINE CTA
+  ============================================ -->
+  <section class="section" style="background-color: var(--white); padding: 64px 0;">
+    <div class="container" style="text-align: center;">
+      <h2 class="section-title" style="margin-bottom: 24px;">Conheça nossa Vitrine</h2>
+      <p class="section-subtitle" style="margin-bottom: 32px;">Explore nosso catálogo completo de produtos com mais detalhes.</p>
+      <a href="vitrine.html" class="btn btn-primary">Acessar Vitrine Completa</a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTATO
+  ============================================ -->
+  <section id="contato" class="section" aria-labelledby="contato-titulo">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Fale com a gente</span>
+        <h2 class="section-title" id="contato-titulo">Entre em contato</h2>
+        <p class="section-subtitle">Estamos prontos para atender você e desenvolver a melhor solução de climatização.</p>
+      </div>
+
+      <!-- Contato por região -->
+      <div class="fade-in" style="margin-bottom: 56px;">
+        <h3 style="font-family: var(--font-title); font-size: 20px; font-weight: 700; color: var(--primary); margin-bottom: 24px; text-align: center;">Fale com o consultor da sua região</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+          <a href="https://wa.me/554333212244?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" style="display: flex; align-items: flex-start; gap: 16px; background: var(--white); border: 2px solid var(--border); border-radius: var(--radius); padding: 24px 20px; text-decoration: none; transition: all 0.3s ease; box-shadow: var(--shadow-sm);" onmouseover="this.style.borderColor='rgba(80,169,0,0.5)';this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+            <div style="width: 44px; height: 44px; background: rgba(37,211,102,0.12); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px;">Comercial / Empresarial</div>
+              <div style="font-family: var(--font-title); font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 2px;">(43) 3321-2244</div>
+              <div style="font-size: 13px; color: var(--text-muted);">Atendimento geral — Seg a Sex, 07:30–17:30</div>
+            </div>
+          </a>
+
+          <a href="https://wa.me/5543996845033?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" style="display: flex; align-items: flex-start; gap: 16px; background: var(--white); border: 2px solid var(--border); border-radius: var(--radius); padding: 24px 20px; text-decoration: none; transition: all 0.3s ease; box-shadow: var(--shadow-sm);" onmouseover="this.style.borderColor='rgba(80,169,0,0.5)';this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+            <div style="width: 44px; height: 44px; background: rgba(37,211,102,0.12); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px;">Curitiba e Região</div>
+              <div style="font-family: var(--font-title); font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 2px;">Roni — (43) 99684-5033</div>
+              <div style="font-size: 13px; color: var(--text-muted);">Diretor de Vendas / CEO</div>
+            </div>
+          </a>
+
+          <a href="https://wa.me/5543998366367?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" style="display: flex; align-items: flex-start; gap: 16px; background: var(--white); border: 2px solid var(--border); border-radius: var(--radius); padding: 24px 20px; text-decoration: none; transition: all 0.3s ease; box-shadow: var(--shadow-sm);" onmouseover="this.style.borderColor='rgba(80,169,0,0.5)';this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+            <div style="width: 44px; height: 44px; background: rgba(37,211,102,0.12); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px;">Londrina e Região</div>
+              <div style="font-family: var(--font-title); font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 2px;">Arthur — (43) 99836-6367</div>
+              <div style="font-size: 13px; color: var(--text-muted);">Consultor de Vendas</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contato-grid">
+        <div class="fade-in">
+          <h3 class="contato-info-title">Fale conosco</h3>
+
+          <div class="contato-items">
+            <div class="contato-item">
+              <div class="contato-item-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="contato-item-label">Endereço</div>
+                <div class="contato-item-value">BR-369 KM-131, S/N, Complexo Industrial Europpa<br>Baixada Jacutinga, Ibiporã - PR</div>
+              </div>
+            </div>
+
+            <div class="contato-item">
+              <div class="contato-item-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="contato-item-label">Telefone</div>
+                <a href="tel:+554333212244" class="contato-item-value" style="color:var(--text-dark);">(43) 3321-2244</a>
+              </div>
+            </div>
+
+            <div class="contato-item">
+              <div class="contato-item-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="contato-item-label">E-mail</div>
+                <a href="mailto:contato.europpaclimatizadores@gmail.com" class="contato-item-value" style="color:var(--text-dark);">contato.europpaclimatizadores@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contato-item">
+              <div class="contato-item-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26414c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <div class="contato-item-label">Horário de atendimento</div>
+                <div class="contato-item-value">Segunda a sexta, 07:30 às 17:30</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contato-sociais">
+            <a href="https://www.instagram.com/europpaclimatizadores/" class="social-btn social-btn-insta" target="_blank" rel="noopener noreferrer" aria-label="Siga-nos no Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Instagram
+            </a>
+            <a href="https://www.facebook.com/climatizadoreseuroppa" class="social-btn social-btn-fb" target="_blank" rel="noopener noreferrer" aria-label="Curta nossa página no Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              Facebook
+            </a>
+            <a href="https://www.youtube.com/@climatizadoreseuroppa" class="social-btn" style="color:#FF0000; border-color:rgba(255,0,0,0.3); background:rgba(255,0,0,0.05);" target="_blank" rel="noopener noreferrer" aria-label="Assista nossos vídeos no YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+              YouTube
+            </a>
+          </div>
+
+          <a href="https://wa.me/554333212244" class="btn btn-primary" style="width:100%;justify-content:center;" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Falar pelo WhatsApp
+          </a>
+        </div>
+
+        <div class="contato-mapa fade-in fade-in-delay-2">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9135.170769031498!2d-50.9908841!3d-23.2604363!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb473af4658697%3A0xf339fa4ed718fe92!2sClimatizadores%20Europpa!5e1!3m2!1spt-BR!2sbr!4v1780939074789!5m2!1spt-BR!2sbr"
+            width="100%"
+            height="480"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localização da Europpa Climatizadores no mapa"
+            aria-label="Mapa mostrando a localização da Europpa Climatizadores em Ibiporã, PR"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+  ============================================ -->
+  <footer role="contentinfo">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <img src="logo.png" alt="Europpa Climatizadores" class="footer-brand-logo">
+            <p class="footer-brand-slogan">A qualidade está no ar.</p>
+            <p style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;">Soluções em climatização evaporativa para indústrias, comércios e residências. Ibiporã – PR. Atendemos todo o Brasil.</p>
+          </div>
+
+          <div>
+            <p class="footer-col-title">Navegação</p>
+            <ul class="footer-links" role="list">
+              <li><a href="#hero" class="footer-link">Início</a></li>
+              <li><a href="#sobre" class="footer-link">Sobre nós</a></li>
+              <li><a href="#produtos" class="footer-link">Produtos</a></li>
+              <li><a href="vitrine.html" class="footer-link">Vitrine</a></li>
+              <li><a href="#servicos" class="footer-link">Serviços</a></li>
+              <li><a href="#mercado" class="footer-link">Mercado</a></li>
+              <li><a href="#depoimentos" class="footer-link">Depoimentos</a></li>
+              <li><a href="#faq" class="footer-link">FAQ</a></li>
+              <li><a href="#planos" class="footer-link">Planos</a></li>
+              <li><a href="#contato" class="footer-link">Contato</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="footer-col-title">Serviços</p>
+            <ul class="footer-links" role="list">
+              <li><a href="#servicos" class="footer-link">Instalação</a></li>
+              <li><a href="#servicos" class="footer-link">Manutenção</a></li>
+              <li><a href="#servicos" class="footer-link">Venda de peças</a></li>
+              <li><a href="#servicos" class="footer-link">Documentação técnica</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="footer-col-title">Contato</p>
+            <div class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:2px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span class="footer-contact-text">(43) 3321-2244</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span class="footer-contact-text" style="word-break:break-all;">contato.europpaclimatizadores@gmail.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span class="footer-contact-text">Seg–Sex, 07:30–17:30</span>
+            </div>
+            <div style="display:flex;gap:10px;margin-top:16px;">
+              <a href="https://www.instagram.com/europpaclimatizadores/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Europpa Climatizadores" style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;transition:background 0.3s;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://www.facebook.com/climatizadoreseuroppa" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Europpa Climatizadores" style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;transition:background 0.3s;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@climatizadoreseuroppa" target="_blank" rel="noopener noreferrer" aria-label="YouTube da Europpa Climatizadores" style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;transition:background 0.3s;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="rgba(38,65,76,0.8)"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p class="footer-copy">&copy; 2026 Europpa Climatizadores. Todos os direitos reservados.</p>
+          <p class="footer-cnpj">CNPJ: 45.652.130/0001-47</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Rodapé MonteSite - Atualização Automática -->
+  <div id="montesite-footer-badge"></div>
+  <script src="https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe"></script>
+
+  <!-- ============================================
+       WHATSAPP FLUTUANTE
+  ============================================ -->
+  <a
+    href="https://wa.me/554333212244"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Fale conosco no WhatsApp"
+    role="link"
+  >
+    <span class="whatsapp-tooltip">Fale conosco no WhatsApp</span>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <!-- ============================================
+       JAVASCRIPT
+  ============================================ -->
+  <script>
+    // Menu hambúrguer
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', function() {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Fechar menu ao clicar em link
+    document.querySelectorAll('.mobile-nav-link').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Fechar menu ao clicar fora
+    document.addEventListener('click', function(e) {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Scroll: nav link ativo e header shadow
+    const header = document.getElementById('header');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
+
+    function updateActiveLink() {
+      const scrollY = window.scrollY;
+      sections.forEach(function(section) {
+        const sectionTop = section.offsetTop - 100;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionBottom) {
+          navLinks.forEach(function(link) {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + section.id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
+
+    // Intersection Observer para fade-in, slide e zoom
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in, .slide-left, .slide-right, .zoom-in').forEach(function(el) {
+      observer.observe(el);
+    });
+
+    // Counter animado para hero stats
+    function animateCounter(el) {
+      var target = parseInt(el.dataset.target, 10);
+      var suffix = el.dataset.suffix || '';
+      var duration = 1400;
+      var start = null;
+      function step(timestamp) {
+        if (!start) start = timestamp;
+        var elapsed = timestamp - start;
+        var progress = Math.min(elapsed / duration, 1);
+        var ease = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(target * ease) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    var statsObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('[data-target]').forEach(animateCounter);
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    var heroStats = document.querySelector('.hero-stats');
+    if (heroStats) statsObserver.observe(heroStats);
+
+    // Lightbox — arrays: showroom/instalação, fotos de produto e modelos
+    var srImgs = Array.from(document.querySelectorAll('.showroom-item img, .instalacao-item img'));
+    var prImgs = Array.from(document.querySelectorAll('.produto-foto-item img'));
+    var mdImgs = Array.from(document.querySelectorAll('.modelo-item img'));
+    var lightbox = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lightbox-img');
+    var lbCounter = document.getElementById('lightbox-counter');
+    var lbIndex = 0;
+    var lbSet = [];
+
+    function lbShow(img) {
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lbImg.classList.toggle('rotate-r', img.classList.contains('rotate-r'));
+      lbCounter.textContent = (lbIndex + 1) + ' / ' + lbSet.length;
+    }
+
+    function openLightboxSR(index) {
+      lbSet = srImgs;
+      lbIndex = index;
+      lbShow(lbSet[index]);
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openLightboxPR(index) {
+      lbSet = prImgs;
+      lbIndex = index;
+      lbShow(lbSet[index]);
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openLightboxMD(index) {
+      lbSet = mdImgs;
+      lbIndex = index;
+      lbShow(lbSet[index]);
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function lbPrev() {
+      lbIndex = (lbIndex - 1 + lbSet.length) % lbSet.length;
+      lbShow(lbSet[lbIndex]);
+    }
+
+    function lbNext() {
+      lbIndex = (lbIndex + 1) % lbSet.length;
+      lbShow(lbSet[lbIndex]);
+    }
+
+    // Lazy load de background-image via data-bg
+    var bgObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          el.style.backgroundImage = 'url("' + el.dataset.bg + '")';
+          bgObserver.unobserve(el);
+        }
+      });
+    }, { rootMargin: '200px' });
+
+    document.querySelectorAll('[data-bg]').forEach(function(el) {
+      bgObserver.observe(el);
+    });
+
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox-prev').addEventListener('click', lbPrev);
+    document.getElementById('lightbox-next').addEventListener('click', lbNext);
+
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox || e.target === lbImg) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') lbPrev();
+      if (e.key === 'ArrowRight') lbNext();
+    });
+
+    // ====================================================
+    // CATÁLOGO DE PRODUTOS — dados e renderização
+    // ====================================================
+    (function() {
+      var B = 'drive-download-20260609T184523Z-3-001';
+      var FT = B + '/FICHA TÉCNICA E MANUAIS';
+      var PORT = B + '/CLIMATIZADOR PORTATIL';
+      var IND = B + '/CLIMATIZADOR INDUSTRIAL';
+      var ACAB = B + '/ACABAMENTO INTERNO';
+
+      var DADOS = {
+        portateis: [
+          {
+            nome: 'D6000',
+            badge: 'Portátil',
+            badgeClass: '',
+            subtitulo: 'Analógica · Indicada para até 15 m²',
+            desc: 'Climatizador portátil com controle analógico. Robusto e eficiente para eventos, escritórios e espaços que exigem climatização flexível.',
+            fotos: [
+              PORT + '/D6000 - ANALÓGICA/FRENTE.png',
+              PORT + '/D6000 - ANALÓGICA/IMG-20250220-WA0015(1).jpg',
+              PORT + '/D6000 - ANALÓGICA/IMG-20250220-WA0016(1).jpg',
+              PORT + '/D6000 - ANALÓGICA/IMG-20250220-WA0017(1).jpg',
+              PORT + '/D6000 - ANALÓGICA/IMG-20250220-WA0020.jpg'
+            ],
+            pdf: FT + '/D6000 - ANAÓGICA - DESCRITIVO TÉCNICO.pdf'
+          },
+          {
+            nome: 'KS6A',
+            badge: 'Portátil',
+            badgeClass: '',
+            subtitulo: 'KSNI6PA · Analógica · Indicada para até [XX m²]',
+            desc: 'Climatizador portátil de 6.000 m³/h com controle analógico. Econômico e eficiente para residências, academias e pequenos comércios.',
+            fotos: [
+              PORT + '/KS6A (NI6PA)/1.png',
+              PORT + '/KS6A (NI6PA)/2.png',
+              PORT + '/KS6A (NI6PA)/3.png',
+              PORT + '/KS6A (NI6PA)/4.png',
+              PORT + '/KS6A (NI6PA)/5.png',
+              PORT + '/KS6A (NI6PA)/6.png',
+              PORT + '/KS6A (NI6PA)/7.png',
+              PORT + '/KS6A (NI6PA)/AREA DE LAZER.png',
+              PORT + '/KS6A (NI6PA)/QUARTO.png',
+              PORT + '/KS6A (NI6PA)/sala.png'
+            ],
+            pdf: FT + '/KS6A -  ANAÓGICA - DESCRITIVO TÉCNICO.pdf'
+          },
+          {
+            nome: 'KS6C',
+            badge: 'Portátil',
+            badgeClass: '',
+            subtitulo: 'EUROPPAQOF-58 · Digital · Indicada para até [XX m²]',
+            desc: 'Versão digital do KS6A com painel eletrônico e controle remoto. Maior precisão no controle da climatização.',
+            fotos: [
+              PORT + '/KS6C - DIGITAL/WhatsApp Image 2026-01-14 at 15.23.54 (1).jpg',
+              PORT + '/KS6C - DIGITAL/WhatsApp Image 2026-01-14 at 15.23.54 (2).jpg',
+              PORT + '/KS6C - DIGITAL/WhatsApp Image 2026-01-14 at 15.23.54 (3).jpg',
+              PORT + '/KS6C - DIGITAL/WhatsApp Image 2026-01-14 at 15.23.55 (1).jpg',
+              PORT + '/KS6C - DIGITAL/WhatsApp Image 2026-01-14 at 15.23.55 (2).jpg',
+              PORT + '/KS6C - DIGITAL/WhatsApp Image 2026-01-14 at 15.23.55 (3).jpg',
+              PORT + '/KS6C - DIGITAL/WhatsApp Image 2026-01-14 at 15.23.55.jpg',
+              PORT + '/KS6C - DIGITAL/WhatsApp Image 2026-01-14 at 15.23.56 (1).jpg',
+              PORT + '/KS6C - DIGITAL/WhatsApp Image 2026-01-14 at 15.23.56 (2).jpg',
+              PORT + '/KS6C - DIGITAL/WhatsApp Image 2026-01-14 at 15.23.56.jpg'
+            ],
+            pdf: FT + '/KS6C - DIGITAL - DESCRITIVO TÉCNICO.pdf'
+          },
+          {
+            nome: 'KS6D',
+            badge: 'Portátil',
+            badgeClass: '',
+            subtitulo: 'KSNI6PD · Digital · Indicada para até [XX m²]',
+            desc: 'Climatizador portátil digital de alta performance. Painel com display digital e múltiplas velocidades para máximo conforto.',
+            fotos: [
+              PORT + '/KS6D (NI6PD)/1.png',
+              PORT + '/KS6D (NI6PD)/2.png',
+              PORT + '/KS6D (NI6PD)/3.png',
+              PORT + '/KS6D (NI6PD)/4.png',
+              PORT + '/KS6D (NI6PD)/5.png',
+              PORT + '/KS6D (NI6PD)/6.png',
+              PORT + '/KS6D (NI6PD)/7.png',
+              PORT + '/KS6D (NI6PD)/8.png',
+              PORT + '/KS6D (NI6PD)/9.png',
+              PORT + '/KS6D (NI6PD)/area.png',
+              PORT + '/KS6D (NI6PD)/quarto.png',
+              PORT + '/KS6D (NI6PD)/sala.png',
+              PORT + '/KS6D (NI6PD)/sala de jantar.png'
+            ],
+            pdf: FT + '/KS6D - DIGITAL - DESCRTIVO TECNICO.pdf'
+          },
+          {
+            nome: 'KS12A',
+            badge: 'Portátil',
+            badgeClass: '',
+            subtitulo: 'KSNI12PA · Analógica · Indicada para até [XX m²]',
+            desc: 'Climatizador portátil de maior capacidade com controle analógico. Ideal para galpões, salões e espaços de médio a grande porte.',
+            fotos: [
+              PORT + '/KS12A (NI12PA)/N12PA/1.png',
+              PORT + '/KS12A (NI12PA)/N12PA/2.png',
+              PORT + '/KS12A (NI12PA)/N12PA/3.png',
+              PORT + '/KS12A (NI12PA)/N12PA/4.png',
+              PORT + '/KS12A (NI12PA)/N12PA/5.png',
+              PORT + '/KS12A (NI12PA)/N12PA/6.png',
+              PORT + '/KS12A (NI12PA)/N12PA/7.png',
+              PORT + '/KS12A (NI12PA)/N12PA/AREA DE LAZER.png',
+              PORT + '/KS12A (NI12PA)/N12PA/CASA.png',
+              PORT + '/KS12A (NI12PA)/N12PA/QUARTO.png'
+            ],
+            pdf: FT + '/KS12A -  ANAÓGICA - DESCRITIVO TÉCNICO.pdf'
+          },
+          {
+            nome: 'KS12D',
+            badge: 'Portátil',
+            badgeClass: '',
+            subtitulo: 'KSNI12PD · Digital · Indicada para até [XX m²]',
+            desc: 'Versão digital do KS12A. Painel eletrônico com display, timer e controle remoto para climatização eficiente em grandes ambientes.',
+            fotos: [
+              PORT + '/KS12D (NI12PD)/1.png',
+              PORT + '/KS12D (NI12PD)/2.png',
+              PORT + '/KS12D (NI12PD)/3.png',
+              PORT + '/KS12D (NI12PD)/4.png',
+              PORT + '/KS12D (NI12PD)/5.png',
+              PORT + '/KS12D (NI12PD)/6.png',
+              PORT + '/KS12D (NI12PD)/7.png',
+              PORT + '/KS12D (NI12PD)/8.png',
+              PORT + '/KS12D (NI12PD)/9.png',
+              PORT + '/KS12D (NI12PD)/AREA DE LAZER.png',
+              PORT + '/KS12D (NI12PD)/CASA.png',
+              PORT + '/KS12D (NI12PD)/QUARTO.png',
+              PORT + '/KS12D (NI12PD)/SALA DE JANTAR.png'
+            ],
+            pdf: FT + '/KS12D - DIGITAL - DESCRTIVO TECNICO.pdf'
+          },
+          {
+            nome: 'KS9000 PRO',
+            badge: 'Portátil Industrial',
+            badgeClass: 'destaque',
+            subtitulo: 'KS9 PRO · Digital · Indicada para até [XX m²]',
+            desc: 'O mais robusto da linha portátil. Alta capacidade e desempenho industrial com a praticidade da mobilidade. Ideal para galpões e eventos de grande porte.',
+            fotos: [
+              PORT + '/KS9000 PRO (NI9 PRO)/1.png',
+              PORT + '/KS9000 PRO (NI9 PRO)/2.png',
+              PORT + '/KS9000 PRO (NI9 PRO)/3.png',
+              PORT + '/KS9000 PRO (NI9 PRO)/4.png',
+              PORT + '/KS9000 PRO (NI9 PRO)/5.png',
+              PORT + '/KS9000 PRO (NI9 PRO)/6.png',
+              PORT + '/KS9000 PRO (NI9 PRO)/7.png',
+              PORT + '/KS9000 PRO (NI9 PRO)/8.png',
+              PORT + '/KS9000 PRO (NI9 PRO)/9.png',
+              PORT + '/KS9000 PRO (NI9 PRO)/area.png',
+              PORT + '/KS9000 PRO (NI9 PRO)/CASA.png'
+            ],
+            pdf: FT + '/KS9000 PRO - DIGITAL - DESCRITIVO TÉCNICO..pdf'
+          },
+          {
+            nome: 'Big Tank',
+            badge: 'Portátil Industrial',
+            badgeClass: 'destaque',
+            subtitulo: 'Portátil industrial de grande capacidade',
+            desc: 'Climatizador portátil industrial Big Tank. Reservatório de grande capacidade para longas operações sem recarga. Ideal para galpões industriais, eventos e grandes espaços que exigem mobilidade e alto desempenho.',
+            fotos: [
+              'assets/big-tank/big-tank-1.jpg',
+              'assets/big-tank/big-tank-2.jpg',
+              'assets/big-tank/big-tank-3.jpg',
+              'assets/big-tank/big-tank-4.jpg',
+              'assets/big-tank/big-tank-5.jpg',
+              'assets/big-tank/big-tank-6.jpg',
+              'assets/big-tank/big-tank-7.jpg'
+            ],
+            pdf: null
+          }
+        ],
+        industriais: [
+          {
+            nome: 'KS12 Lateral',
+            badge: 'Industrial',
+            badgeClass: 'industrial',
+            subtitulo: 'Saída lateral',
+            desc: 'Climatizador industrial de parede com saída lateral. Excelente para instalação em fachadas de galpões e armazéns de médio porte.',
+            fotos: [
+              IND + '/KS12 LATERAL/KS12 LATERAL.jpg',
+              IND + '/KS12 LATERAL/44522807_2146403392045813_4975817297152180224_n.jpg',
+              IND + '/KS12 LATERAL/47152461_2205001886185963_5555872627844710400_n.jpg',
+              IND + '/KS12 LATERAL/514411406_24429671706625663_1445714706003497248_n.jpg',
+              IND + '/KS12 LATERAL/515628071_24429671796625654_4514715324789107301_n.jpg'
+            ],
+            pdf: null
+          },
+          {
+            nome: 'KS23 Lateral',
+            badge: 'Industrial',
+            badgeClass: 'industrial',
+            subtitulo: 'Saída para baixo e saída lateral',
+            desc: 'Climatizador industrial de alta capacidade com opção de saída de ar para baixo ou lateral. Ideal para galpões industriais e grandes espaços comerciais.',
+            fotos: [
+              IND + '/KS23 LATERAL/image.png',
+              IND + '/KS23 LATERAL/120133088_3631890236830447_5038751062127385444_n.jpg',
+              IND + '/KS23 LATERAL/138772534_3947795581906576_7579151658066689341_n.jpg',
+              IND + '/KS23 LATERAL/170093739_4186386228047509_1671240139128553736_n.jpg',
+              IND + '/KS23 LATERAL/44573200_2146404428712376_5601151586123382784_n.jpg',
+              IND + '/KS23 LATERAL/44696863_2146403165379169_2838194073725042688_n.jpg',
+              IND + '/KS23 LATERAL/508444138_24301976639395171_1354648365445441901_n.jpg',
+              IND + '/KS23 LATERAL/509294814_24301976982728470_3427229899990493441_n.jpg',
+              IND + '/KS23 LATERAL/515498061_24429250140001153_3054487830985418042_n.jpg',
+              IND + '/KS23 LATERAL/515975412_24457576790501821_280582080741353125_n.jpg',
+              IND + '/KS23 LATERAL/78069444-6949-4b0a-94f7-e392e96fad0c.jpg'
+            ],
+            pdf: FT + '/KS23 - DESCRTIVO TECNICO.pdf'
+          },
+          {
+            nome: 'KS23 Teto',
+            badge: 'Industrial',
+            badgeClass: 'industrial',
+            subtitulo: 'Montagem em teto',
+            desc: 'Climatizador industrial de teto para distribuição uniforme de ar em grandes volumes. Ideal para instalações com teto alto.',
+            fotos: [
+              IND + '/KS23 TETO/119217050_3591921450827326_5001054092717406764_n.jpg',
+              IND + '/KS23 TETO/119426082_3591921590827312_449216545846217009_n.jpg',
+              IND + '/KS23 TETO/120077827_3631890066830464_2082560796539030790_n.jpg',
+              IND + '/KS23 TETO/120119883_3631890133497124_6350238826293610190_n.jpg',
+              IND + '/KS23 TETO/122457165_3737202639632539_3769411215444835552_n.jpg',
+              IND + '/KS23 TETO/122702091_3737202749632528_4317556408546177151_n.jpg',
+              IND + '/KS23 TETO/122789172_3737202282965908_5075352819377848700_n.jpg',
+              IND + '/KS23 TETO/123410201_3755153361170800_1382719868467966898_n.jpg',
+              IND + '/KS23 TETO/137300812_3947795655239902_6049949419152621932_n.jpg',
+              IND + '/KS23 TETO/15613216584.jpg'
+            ],
+            pdf: FT + '/KS23 - DESCRTIVO TECNICO.pdf'
+          },
+          {
+            nome: 'KS30',
+            badge: 'Industrial',
+            badgeClass: 'industrial',
+            subtitulo: '',
+            desc: 'Climatizador industrial de grande porte para ambientes de alto volume. Máxima capacidade de renovação de ar com eficiência energética.',
+            fotos: [
+              IND + '/KS30/Captura de tela 2025-08-13 142127.png'
+            ],
+            pdf: null
+          },
+          {
+            nome: 'KS56',
+            badge: 'Industrial',
+            badgeClass: 'industrial',
+            subtitulo: '',
+            desc: 'O maior da linha industrial Europpa. Capacidade excepcional para climatização de grandes instalações industriais, aviários e espaços de alto volume.',
+            fotos: [
+              IND + '/KS56/Sem título-3.png',
+              IND + '/KS56/Sem título-4.png',
+              IND + '/KS56/Captura de tela 2025-08-07 155221.png'
+            ],
+            pdf: FT + '/KS56 - DESCRTIVO TECNICO.pdf'
+          }
+        ],
+        acabamento: [
+          {
+            nome: 'Difusor 6 Vias',
+            badge: 'Mais utilizado',
+            badgeClass: 'destaque',
+            subtitulo: 'Acabamento interno',
+            desc: 'Difusor de 6 vias para distribuição de ar em seis direções. O modelo mais utilizado pela Europpa, ideal para a maioria das instalações residenciais e comerciais.',
+            fotos: [
+              ACAB + '/DIFUSOR 6 VIAS/511292770_24374385762154258_6215096816353926565_n.jpg',
+              ACAB + '/DIFUSOR 6 VIAS/511542209_24363158216610346_3005548395543687531_n.jpg',
+              ACAB + '/DIFUSOR 6 VIAS/511846615_24374385682154266_6875485558164488390_n.jpg',
+              ACAB + '/DIFUSOR 6 VIAS/514353015_24425253217067512_6368860029902194615_n.jpg',
+              ACAB + '/DIFUSOR 6 VIAS/514636132_24425253180400849_3772621083722617810_n.jpg',
+              ACAB + '/DIFUSOR 6 VIAS/514908687_24427454080180759_665707912738765795_n.jpg',
+              ACAB + '/DIFUSOR 6 VIAS/514955517_24425253170400850_7616916778691010711_n.jpg',
+              ACAB + '/DIFUSOR 6 VIAS/515015283_24427453983514102_4629384983693129280_n.jpg',
+              ACAB + '/DIFUSOR 6 VIAS/515079653_24427453986847435_8108248923582141562_n.jpg',
+              ACAB + '/DIFUSOR 6 VIAS/515092878_24425251693734331_8362447678704126330_n.jpg',
+              ACAB + '/DIFUSOR 6 VIAS/515369667_24425253163734184_7588276376237993026_n.jpg',
+              ACAB + '/DIFUSOR 6 VIAS/515446898_24425253183734182_8059396275047176840_n.jpg',
+              ACAB + '/DIFUSOR 6 VIAS/91799928_3139737832712359_4908707483964407808_n.jpg'
+            ],
+            pdf: null
+          },
+          {
+            nome: 'Difusor 8 Vias',
+            badge: 'Mais utilizado',
+            badgeClass: 'destaque',
+            subtitulo: 'Acabamento interno',
+            desc: 'Difusor de 8 vias para distribuição de ar em oito direções. Excelente para ambientes amplos que exigem cobertura maior e conforto térmico uniforme.',
+            fotos: [
+              ACAB + '/DIFUSOR 8 VIAS/117382267_3490118947674244_5180332238818447254_n.jpg',
+              ACAB + '/DIFUSOR 8 VIAS/119234106_3591921084160696_6175004552518696076_n.jpg',
+              ACAB + '/DIFUSOR 8 VIAS/471677380_9393137820705631_5451439244643489434_n.jpg',
+              ACAB + '/DIFUSOR 8 VIAS/49864468_2266255066727311_3184501298300977152_n.jpg',
+              ACAB + '/DIFUSOR 8 VIAS/516473191_24467122509547249_1218546236111461877_n.jpg',
+              ACAB + '/DIFUSOR 8 VIAS/92136094_3139737919379017_3670323659244830720_n.jpg',
+              ACAB + '/DIFUSOR 8 VIAS/92192107_3139737962712346_8818218198340993024_n.jpg'
+            ],
+            pdf: null
+          },
+          {
+            nome: 'Grelha',
+            badge: 'Acabamento',
+            badgeClass: '',
+            subtitulo: 'Acabamento interno',
+            desc: 'Grelha para acabamento de dutos de climatização. Alta qualidade para distribuição uniforme do ar e acabamento estético em diversas aplicações.',
+            fotos: [
+              ACAB + '/GRELHA/117531405_3490119317674207_6118777541168792520_n.jpg',
+              ACAB + '/GRELHA/120130874_3631890330163771_6322144465279135594_n.jpg',
+              ACAB + '/GRELHA/180132988_4258883737464424_4739842854370543847_n.jpg',
+              ACAB + '/GRELHA/508798737_24301976616061840_3853324452749964082_n.jpg',
+              ACAB + '/GRELHA/509349714_24301977019395133_5139425503665539045_n.jpg',
+              ACAB + '/GRELHA/514318353_24429250090001158_2231198868063191269_n.jpg',
+              ACAB + '/GRELHA/514774937_24429250133334487_2659554568332749828_n.jpg',
+              ACAB + '/GRELHA/55541948_2386292461390237_3622031923141935104_n.jpg',
+              ACAB + '/GRELHA/55614068_2388143467871803_2051937706748936192_n.jpg'
+            ],
+            pdf: null
+          },
+          {
+            nome: 'Tweeter',
+            badge: 'Mais utilizado',
+            badgeClass: 'destaque',
+            subtitulo: 'Acabamento interno',
+            desc: 'Difusor tipo tweeter para saída de ar direcional. Versátil e elegante, amplamente utilizado em instalações residenciais e comerciais pela Europpa.',
+            fotos: [
+              ACAB + '/TWEETER/117409966_3490119034340902_1047056437367919129_n.jpg',
+              ACAB + '/TWEETER/117444507_3490118904340915_1211351051638896732_n.jpg',
+              ACAB + '/TWEETER/117642166_3490119077674231_867353047599688321_n.jpg',
+              ACAB + '/TWEETER/120108200_3635348126484658_6693746768153038907_n.jpg',
+              ACAB + '/TWEETER/134978305_3925190647500403_7700228747952663910_n.jpg',
+              ACAB + '/TWEETER/135489004_3925190500833751_553240228399069887_n.jpg',
+              ACAB + '/TWEETER/135492308_3925190550833746_492166180476722368_n.jpg',
+              ACAB + '/TWEETER/135764177_3925190344167100_3451304497775258732_n.jpg',
+              ACAB + '/TWEETER/137278666_3947795508573250_2579496099045128998_n.jpg',
+              ACAB + '/TWEETER/145730079_4011135428905924_2405820537314006742_n.jpg'
+            ],
+            pdf: null
+          },
+          {
+            nome: 'Difusor 4 Vias',
+            badge: 'Acabamento',
+            badgeClass: '',
+            subtitulo: 'Acabamento interno',
+            desc: 'Difusor de 4 vias para distribuição de ar nas quatro direções. Solução econômica e eficiente para ambientes de menor porte.',
+            fotos: [
+              ACAB + '/DIFUSOR 4 VIAS/510627732_24333074926285342_7425141264703298185_n.jpg',
+              ACAB + '/DIFUSOR 4 VIAS/511009143_24331186266474208_713903591591088927_n.jpg',
+              ACAB + '/DIFUSOR 4 VIAS/511539276_24358369937089174_1605641808824136682_n.jpg'
+            ],
+            pdf: null
+          }
+        ]
+      };
+
+      function buildCard(prod) {
+        var card = document.createElement('div');
+        card.className = 'prod-card zoom-in';
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('aria-label', 'Ver detalhes: ' + prod.nome);
+        card.innerHTML =
+          '<div class="prod-card-img"><img src="' + prod.fotos[0] + '" alt="' + prod.nome + '" loading="lazy"></div>' +
+          '<div class="prod-card-body">' +
+            '<span class="prod-card-badge ' + prod.badgeClass + '">' + prod.badge + '</span>' +
+            '<h3 class="prod-card-nome">' + prod.nome + '</h3>' +
+            '<p class="prod-card-subtitle">' + prod.subtitulo + '</p>' +
+            '<button class="prod-card-btn" tabindex="-1" aria-hidden="true">Ver detalhes ' +
+              '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>' +
+            '</button>' +
+          '</div>';
+        card.addEventListener('click', function() { openProdModal(prod); });
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openProdModal(prod); }
+        });
+        return card;
+      }
+
+      Object.keys(DADOS).forEach(function(cat) {
+        var grid = document.getElementById('tab-' + cat);
+        if (!grid) return;
+        DADOS[cat].forEach(function(prod) {
+          grid.appendChild(buildCard(prod));
+        });
+      });
+
+      // Tab switching
+      document.querySelectorAll('.linha-tab').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.linha-tab').forEach(function(b) {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          var target = btn.dataset.tab;
+          ['portateis', 'industriais', 'acabamento'].forEach(function(cat) {
+            var grid = document.getElementById('tab-' + cat);
+            if (cat === target) {
+              grid.removeAttribute('hidden');
+            } else {
+              grid.setAttribute('hidden', '');
+            }
+          });
+        });
+      });
+
+      // Product modal
+      var prodModal = document.getElementById('prod-modal');
+      var prodModalImg = document.getElementById('prod-modal-img');
+      var prodModalBadge = document.getElementById('prod-modal-badge');
+      var prodModalNome = document.getElementById('prod-modal-nome');
+      var prodModalSubtitulo = document.getElementById('prod-modal-subtitulo');
+      var prodModalDesc = document.getElementById('prod-modal-desc');
+      var prodModalPdf = document.getElementById('prod-modal-pdf');
+      var prodGalleryCounter = document.getElementById('prod-gallery-counter');
+      var prodGalleryThumbs = document.getElementById('prod-gallery-thumbs');
+      var currentFotos = [];
+      var currentFotoIndex = 0;
+
+      function showProdFoto(idx) {
+        currentFotoIndex = idx;
+        prodModalImg.src = currentFotos[idx];
+        prodModalImg.alt = prodModalNome.textContent + ' — foto ' + (idx + 1);
+        prodGalleryCounter.textContent = (idx + 1) + ' / ' + currentFotos.length;
+        prodGalleryThumbs.querySelectorAll('.prod-gallery-thumb').forEach(function(t, i) {
+          t.classList.toggle('active', i === idx);
+        });
+        var active = prodGalleryThumbs.querySelector('.prod-gallery-thumb.active');
+        if (active) active.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      }
+
+      function openProdModal(prod) {
+        currentFotos = prod.fotos;
+        prodModalBadge.textContent = prod.badge;
+        prodModalNome.textContent = prod.nome;
+        prodModalSubtitulo.textContent = prod.subtitulo;
+        prodModalDesc.textContent = prod.desc;
+        if (prod.pdf) {
+          prodModalPdf.href = prod.pdf;
+          prodModalPdf.classList.remove('hidden');
+        } else {
+          prodModalPdf.classList.add('hidden');
+        }
+        prodGalleryThumbs.innerHTML = '';
+        currentFotos.forEach(function(src, i) {
+          var thumb = document.createElement('div');
+          thumb.className = 'prod-gallery-thumb';
+          var img = document.createElement('img');
+          img.src = src;
+          img.alt = prod.nome + ' thumbnail ' + (i + 1);
+          img.loading = 'lazy';
+          thumb.appendChild(img);
+          thumb.addEventListener('click', function() { showProdFoto(i); });
+          prodGalleryThumbs.appendChild(thumb);
+        });
+        showProdFoto(0);
+        prodModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        document.getElementById('prod-modal-close').focus();
+      }
+
+      function closeProdModal() {
+        prodModal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      document.getElementById('prod-modal-close').addEventListener('click', closeProdModal);
+      document.getElementById('prod-gallery-prev').addEventListener('click', function() {
+        showProdFoto((currentFotoIndex - 1 + currentFotos.length) % currentFotos.length);
+      });
+      document.getElementById('prod-gallery-next').addEventListener('click', function() {
+        showProdFoto((currentFotoIndex + 1) % currentFotos.length);
+      });
+      prodModal.addEventListener('click', function(e) {
+        if (e.target === prodModal) closeProdModal();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (!prodModal.classList.contains('open')) return;
+        if (e.key === 'Escape') closeProdModal();
+        if (e.key === 'ArrowLeft') showProdFoto((currentFotoIndex - 1 + currentFotos.length) % currentFotos.length);
+        if (e.key === 'ArrowRight') showProdFoto((currentFotoIndex + 1) % currentFotos.length);
+      });
+
+      // Re-observe newly created cards for fade-in animation
+      document.querySelectorAll('.prod-card').forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.closest('.faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(el) {
+          el.classList.remove('open');
+          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
